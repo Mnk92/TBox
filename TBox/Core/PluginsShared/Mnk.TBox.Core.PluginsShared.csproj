@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCDBE777-304F-40AC-8C5F-31B3A6BE4341}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Mnk.TBox.Core.PluginsShared</RootNamespace>
+    <AssemblyName>Mnk.TBox.Core.PluginsShared</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\Debug\Libraries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\Release\Libraries\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Libs\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Exchange.WebServices.Auth, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Libs\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mnk.Library.Common, Version=1.0.5285.11023, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Mnk.Library\Mnk.Library.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mnk.Library.ScriptEngine, Version=1.0.5285.11023, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Mnk.Library\Mnk.Library.ScriptEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mnk.Library.WpfControls, Version=1.0.5285.11377, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Mnk.Library\Mnk.Library.WpfControls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mnk.Library.WpfSyntaxHighlighter, Version=1.0.5367.23490, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Mnk.Library\Mnk.Library.WpfSyntaxHighlighter.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mnk.Library.WpfWinForms, Version=1.0.5367.23487, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Libs\Mnk.Library\Mnk.Library.WpfWinForms.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RibbonControlsLibrary">
+      <HintPath>..\..\..\Libs\RibbonControlsLibrary.4.0.0\lib\net40\RibbonControlsLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZetaLongPaths, Version=1.0.12.41, Culture=neutral, PublicKeyToken=b764f59068f31f38, processorArchitecture=MSIL">
+      <HintPath>..\..\..\Libs\ZetaLongPaths.1.0.12.41\lib\net452-full\ZetaLongPaths.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Localization\TrExtension.cs" />
+    <Compile Include="Controls\ResponseBox.xaml.cs">
+      <DependentUpon>ResponseBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RibbonDialogWindow.cs" />
+    <Compile Include="Controls\ServiceControl.xaml.cs">
+      <DependentUpon>ServiceControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoadTesting\Components\FormLoadTesting.xaml.cs">
+      <DependentUpon>FormLoadTesting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoadTesting\LoadTester.cs" />
+    <Compile Include="LoadTesting\ILoadTester.cs" />
+    <Compile Include="LoadTesting\IOperationRunner.cs" />
+    <Compile Include="LoadTesting\IOperation.cs" />
+    <Compile Include="LoadTesting\IProfile.cs" />
+    <Compile Include="LoadTesting\Statistic\AnalyzeInfo.cs" />
+    <Compile Include="LoadTesting\Statistic\Analyzer.cs" />
+    <Compile Include="LoadTesting\Statistic\GraphicsInfo.cs" />
+    <Compile Include="LoadTesting\Statistic\StatisticInfo.cs" />
+    <Compile Include="LoadTesting\Statistic\StatisticsCollector.cs" />
+    <Compile Include="LoadTesting\Statistic\OperationStatistic.cs" />
+    <Compile Include="Encoders\Base64Encode.cs" />
+    <Compile Include="Encoders\BracketsFormatter.cs" />
+    <Compile Include="Encoders\CppCodeFormatter.cs" />
+    <Compile Include="Encoders\HtmlParser.cs" />
+    <Compile Include="Encoders\JsonParser.cs" />
+    <Compile Include="Encoders\SQLParser.cs" />
+    <Compile Include="Encoders\XmlHelper.cs" />
+    <Compile Include="LongPaths\NativeMethods.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportsGenerator\DayTypes.cs" />
+    <Compile Include="ReportsGenerator\ExchangeEmailSender.cs" />
+    <Compile Include="ReportsGenerator\IDayStatusStrategy.cs" />
+    <Compile Include="ReportsGenerator\IDayTypeProvider.cs" />
+    <Compile Include="ReportsGenerator\IReportScript.cs" />
+    <Compile Include="ReportsGenerator\IReportScriptContext.cs" />
+    <Compile Include="ReportsGenerator\LoggedInfo.cs" />
+    <Compile Include="Automator\ScriptContext.cs" />
+    <Compile Include="ScriptEngine\IScriptConfigurator.cs" />
+    <Compile Include="ScriptEngine\MultiFileScriptConfigurator.cs" />
+    <Compile Include="ScriptEngine\EditorDialog.xaml.cs">
+      <DependentUpon>EditorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Automator\IScript.cs" />
+    <Compile Include="Automator\IScriptContext.cs" />
+    <Compile Include="ScriptEngine\IScriptRunner.cs" />
+    <Compile Include="ScriptEngine\OperationDialog.xaml.cs">
+      <DependentUpon>OperationDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptEngine\ParameterTemplate.cs" />
+    <Compile Include="ScriptEngine\ScriptsConfigurator.xaml.cs">
+      <DependentUpon>ScriptsConfigurator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Automator\ScriptsRunner.cs" />
+    <Compile Include="ScriptEngine\SingleFileScriptConfigurator.cs" />
+    <Compile Include="Templates\FileSystemProcessor.cs" />
+    <Compile Include="Templates\IFileSystemProcessor.cs" />
+    <Compile Include="Templates\IKnownValues.cs" />
+    <Compile Include="Templates\IStringFiller.cs" />
+    <Compile Include="Templates\KeysCollector.cs" />
+    <Compile Include="Templates\KnownValues.cs" />
+    <Compile Include="Templates\StringFiller.cs" />
+    <Compile Include="Templates\TemplatesWorker.cs" />
+    <Compile Include="Tools\FeatureToggler.cs" />
+    <Compile Include="Tools\CassiniRunner.cs" />
+    <Compile Include="Tools\IMsBuildProvider.cs" />
+    <Compile Include="Tools\ISvnProvider.cs" />
+    <Compile Include="Tools\MsBuildProvider.cs" />
+    <Compile Include="Tools\SvnProvider.cs" />
+    <Compile Include="Tools\XmlExtensions.cs" />
+    <Compile Include="LongPaths\LongPathExtensions.cs" />
+    <Compile Include="Watcher\DirInfo.cs" />
+    <Compile Include="Watcher\FileAnalizer.cs" />
+    <Compile Include="Watcher\FileDirection.cs" />
+    <Compile Include="Watcher\IDataParser.cs" />
+    <Compile Include="Watcher\ILogDialog.cs" />
+    <Compile Include="Watcher\Watch.cs" />
+    <Compile Include="Watcher\WatchEngine.cs" />
+    <Compile Include="Watcher\WatchSettings.cs" />
+    <Compile Include="Watcher\Worker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj">
+      <Project>{853fde4c-f292-4bdf-8eec-b50fe738cb46}</Project>
+      <Name>Mnk.TBox.Locales.Localization</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Contracts\Mnk.TBox.Core.Contracts.csproj">
+      <Project>{17848BF1-7A98-4F7F-B124-8B6C99A4712C}</Project>
+      <Name>Mnk.TBox.Core.Contracts</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Encoders\CppStringFinder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controls\ResponseBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ServiceControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LoadTesting\Components\FormLoadTesting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScriptEngine\EditorDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScriptEngine\OperationDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ScriptEngine\ScriptsConfigurator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

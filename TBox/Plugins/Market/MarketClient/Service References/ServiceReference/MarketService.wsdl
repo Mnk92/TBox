@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MarketService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpBinding_IMarketService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8080/MarketService?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8080/MarketService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8080/MarketService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MarketInterfaces" />
+      <xsd:import schemaLocation="http://localhost:8080/MarketService?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:8080/MarketService?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import schemaLocation="http://localhost:8080/MarketService?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Common.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMarketService_Plugin_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Plugin_GetList" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Plugin_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Plugin_GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Plugin_GetListCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:Plugin_GetListCount" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Plugin_GetListCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Plugin_GetListCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="DownloadContract">
+    <wsdl:part name="parameters" element="tns:DownloadContract" />
+  </wsdl:message>
+  <wsdl:message name="DownloadContract_Headers">
+    <wsdl:part name="Author" element="tns:Author" />
+    <wsdl:part name="Name" element="tns:Name" />
+  </wsdl:message>
+  <wsdl:message name="DataContract">
+    <wsdl:part name="parameters" element="tns:DataContract" />
+  </wsdl:message>
+  <wsdl:message name="DataContract_Headers">
+    <wsdl:part name="Descriptions" element="tns:Descriptions" />
+    <wsdl:part name="Length" element="tns:Length" />
+  </wsdl:message>
+  <wsdl:message name="PluginUploadContract">
+    <wsdl:part name="parameters" element="tns:PluginUploadContract" />
+  </wsdl:message>
+  <wsdl:message name="PluginUploadContract_Headers">
+    <wsdl:part name="Descriptions" element="tns:Descriptions" />
+    <wsdl:part name="Item" element="tns:Item" />
+    <wsdl:part name="Length" element="tns:Length" />
+  </wsdl:message>
+  <wsdl:message name="UploadContract">
+    <wsdl:part name="parameters" element="tns:UploadContract" />
+  </wsdl:message>
+  <wsdl:message name="UploadContract_Headers">
+    <wsdl:part name="Exist" element="tns:Exist" />
+    <wsdl:part name="Success" element="tns:Success" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Plugin_Delete_InputMessage">
+    <wsdl:part name="parameters" element="tns:Plugin_Delete" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Plugin_Delete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Plugin_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Plugin_Exist_InputMessage">
+    <wsdl:part name="parameters" element="tns:Plugin_Exist" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Plugin_Exist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Plugin_ExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Bug_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bug_GetList" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Bug_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bug_GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Bug_GetListCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bug_GetListCount" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Bug_GetListCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bug_GetListCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Bug_Send_InputMessage">
+    <wsdl:part name="parameters" element="tns:Bug_Send" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Bug_Send_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Bug_SendResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Author_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Author_GetList" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Author_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Author_GetListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Type_GetList_InputMessage">
+    <wsdl:part name="parameters" element="tns:Type_GetList" />
+  </wsdl:message>
+  <wsdl:message name="IMarketService_Type_GetList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Type_GetListResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMarketService">
+    <wsdl:operation name="Plugin_GetList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Plugin_GetList" message="tns:IMarketService_Plugin_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Plugin_GetListResponse" message="tns:IMarketService_Plugin_GetList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_GetListCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Plugin_GetListCount" message="tns:IMarketService_Plugin_GetListCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Plugin_GetListCountResponse" message="tns:IMarketService_Plugin_GetListCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Download">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Plugin_Download" name="DownloadContract" message="tns:DownloadContract" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Plugin_DownloadResponse" name="DataContract" message="tns:DataContract" />
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Upload">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Plugin_Upload" name="PluginUploadContract" message="tns:PluginUploadContract" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Plugin_UploadResponse" name="UploadContract" message="tns:UploadContract" />
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Upgrade">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Plugin_Upgrade" name="PluginUploadContract" message="tns:PluginUploadContract" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Plugin_UpgradeResponse" name="UploadContract" message="tns:UploadContract" />
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Delete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Plugin_Delete" message="tns:IMarketService_Plugin_Delete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Plugin_DeleteResponse" message="tns:IMarketService_Plugin_Delete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Exist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Plugin_Exist" message="tns:IMarketService_Plugin_Exist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Plugin_ExistResponse" message="tns:IMarketService_Plugin_Exist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bug_GetList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Bug_GetList" message="tns:IMarketService_Bug_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Bug_GetListResponse" message="tns:IMarketService_Bug_GetList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bug_GetListCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Bug_GetListCount" message="tns:IMarketService_Bug_GetListCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Bug_GetListCountResponse" message="tns:IMarketService_Bug_GetListCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Bug_Send">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Bug_Send" message="tns:IMarketService_Bug_Send_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Bug_SendResponse" message="tns:IMarketService_Bug_Send_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Author_GetList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Author_GetList" message="tns:IMarketService_Author_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Author_GetListResponse" message="tns:IMarketService_Author_GetList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Type_GetList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMarketService/Type_GetList" message="tns:IMarketService_Type_GetList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMarketService/Type_GetListResponse" message="tns:IMarketService_Type_GetList_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMarketService" type="tns:IMarketService">
+    <wsp:PolicyReference URI="#BasicHttpBinding_IMarketService_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Plugin_GetList">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Plugin_GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_GetListCount">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Plugin_GetListCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Download">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Plugin_Download" style="document" />
+      <wsdl:input name="DownloadContract">
+        <soap:header message="tns:DownloadContract_Headers" part="Author" use="literal" />
+        <soap:header message="tns:DownloadContract_Headers" part="Name" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="DataContract">
+        <soap:header message="tns:DataContract_Headers" part="Descriptions" use="literal" />
+        <soap:header message="tns:DataContract_Headers" part="Length" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Upload">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Plugin_Upload" style="document" />
+      <wsdl:input name="PluginUploadContract">
+        <soap:header message="tns:PluginUploadContract_Headers" part="Descriptions" use="literal" />
+        <soap:header message="tns:PluginUploadContract_Headers" part="Item" use="literal" />
+        <soap:header message="tns:PluginUploadContract_Headers" part="Length" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UploadContract">
+        <soap:header message="tns:UploadContract_Headers" part="Exist" use="literal" />
+        <soap:header message="tns:UploadContract_Headers" part="Success" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Upgrade">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Plugin_Upgrade" style="document" />
+      <wsdl:input name="PluginUploadContract">
+        <soap:header message="tns:PluginUploadContract_Headers" part="Descriptions" use="literal" />
+        <soap:header message="tns:PluginUploadContract_Headers" part="Item" use="literal" />
+        <soap:header message="tns:PluginUploadContract_Headers" part="Length" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UploadContract">
+        <soap:header message="tns:UploadContract_Headers" part="Exist" use="literal" />
+        <soap:header message="tns:UploadContract_Headers" part="Success" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Delete">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Plugin_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Plugin_Exist">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Plugin_Exist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bug_GetList">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Bug_GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bug_GetListCount">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Bug_GetListCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Bug_Send">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Bug_Send" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Author_GetList">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Author_GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Type_GetList">
+      <soap:operation soapAction="http://tempuri.org/IMarketService/Type_GetList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MarketService">
+    <wsdl:port name="BasicHttpBinding_IMarketService" binding="tns:BasicHttpBinding_IMarketService">
+      <soap:address location="http://localhost:8080/MarketService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

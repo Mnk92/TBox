@@ -1,0 +1,13 @@
+.vs
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.svcinfo
+*.svcmap
+*.disco
+*.datasource
+*.edmx
+bin
+obj
+/Libs/

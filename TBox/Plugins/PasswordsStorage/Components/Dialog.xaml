@@ -1,0 +1,61 @@
+﻿<dialogs:DialogWindow x:Class="Mnk.TBox.Plugins.PasswordsStorage.Components.Dialog"
+                      xmlns:loc="clr-namespace:Mnk.TBox.Plugins.PasswordsStorage.Code.Localization"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dialogs="clr-namespace:Mnk.Library.WpfControls.Dialogs;assembly=Mnk.Library.WPFControls"
+             xmlns:units="clr-namespace:Mnk.Library.WpfControls.Components.Units;assembly=Mnk.Library.WPFControls"
+             xmlns:settings="clr-namespace:Mnk.TBox.Plugins.PasswordsStorage.Code.Settings"
+             xmlns:captioned="clr-namespace:Mnk.Library.WpfControls.Components.Captioned;assembly=Mnk.Library.WPFControls"
+             mc:Ignorable="d" 
+             Title="{Binding Key}" ShowActivated="True" WindowStartupLocation="CenterOwner" ShowInTaskbar="True"
+             MinWidth="540" MinHeight="320"
+             Width="540" Height="320" >
+    <DockPanel>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem Content="{loc:Tr ClickOnCellToCopyPassword}" HorizontalAlignment="Right"/>
+        </StatusBar>
+        <DockPanel DockPanel.Dock="Bottom" >
+            <DockPanel DockPanel.Dock="Top" >
+                <Button Content="{loc:Tr CopySelected}" Click="CopyAll" Margin="20 10" DockPanel.Dock="Left" IsEnabled="{Binding ElementName=Passwords, Path=IsSelected}" DataContext="{Binding ElementName=Passwords, Path=SelectedValue}"/>
+                <Button Content="{loc:Tr NewPassword}" Click="NewPassword" Margin="20 10" DockPanel.Dock="Left" IsEnabled="{Binding ElementName=Passwords, Path=IsSelected}" DataContext="{Binding ElementName=Passwords, Path=SelectedValue}" />
+                <Button Content="Save" IsDefault="True" IsCancel="True" Margin="20 10" Click="SaveClick" DockPanel.Dock="Right"/>
+            </DockPanel>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Top">
+            <CheckBox Name="IsReadOnly" VerticalAlignment="Center" Content="{loc:Tr IsReadOnly}" Margin="20 10" DockPanel.Dock="Left"/>
+            <TextBlock Text="{loc:Tr PasswordExistanceWarning}" TextWrapping="Wrap" Margin="0" Padding="0"/>
+        </DockPanel>
+        <Grid HorizontalAlignment="Stretch" DockPanel.Dock="Top" Margin="55 0 5 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="{loc:Tr Key}" Grid.Column="0" Padding="2" Margin="2" HorizontalAlignment="Center"/>
+            <TextBlock Text="{loc:Tr Login}" Grid.Column="1" Padding="2" Margin="2" HorizontalAlignment="Center"/>
+            <TextBlock Text="{loc:Tr Password}" Grid.Column="2" Padding="2" Margin="2" HorizontalAlignment="Center"/>
+            <TextBlock Text="{loc:Tr Comment}" Grid.Column="3" Padding="2" Margin="2" HorizontalAlignment="Center"/>
+        </Grid>
+        <units:ListBoxUnit ItemsSource="{Binding LoginInfos}" UnitType="Text" Title="{loc:Tr ConfigurePassword}" Name="Passwords">
+            <units:ListBoxUnit.ItemTemplate>
+                <DataTemplate DataType="settings:LoginInfo">
+                    <Grid HorizontalAlignment="Stretch">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding Key}" FontWeight="Bold" Grid.Column="0" Padding="2" Margin="5" VerticalAlignment="Center"/>
+                        <TextBox Text="{Binding Login}" Grid.Column="1" Padding="2" Margin="5" VerticalAlignment="Center" GotFocus="CellClick" IsReadOnlyCaretVisible="True" IsReadOnly="{Binding ElementName=IsReadOnly, Path=IsChecked}"/>
+                        <captioned:CaptionedPasswordBox Value="{Binding Password}" Grid.Column="2" Margin="5" VerticalAlignment="Stretch" GotFocus="CellClick" Click="CellClick" IsReadOnly="{Binding ElementName=IsReadOnly, Path=IsChecked}"/>
+                        <TextBox Text="{Binding Comment}" Grid.Column="3" Padding="2" Margin="5" VerticalAlignment="Center" GotFocus="CellClick" IsReadOnlyCaretVisible="True" IsReadOnly="{Binding ElementName=IsReadOnly, Path=IsChecked}"/>
+                    </Grid>
+                </DataTemplate>
+            </units:ListBoxUnit.ItemTemplate>
+        </units:ListBoxUnit>
+    </DockPanel>
+</dialogs:DialogWindow>

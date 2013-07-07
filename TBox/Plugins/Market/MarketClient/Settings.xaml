@@ -1,0 +1,27 @@
+﻿<UserControl xmlns:my2="clr-namespace:Mnk.TBox.Plugins.Market.Client.Components.Uploaders"  
+             xmlns:my1="clr-namespace:Mnk.TBox.Plugins.Market.Client.Components"  
+             xmlns:my="clr-namespace:Mnk.TBox.Plugins.Market.Client.Components.Installers"  
+             x:Class="Mnk.TBox.Plugins.Market.Client.Settings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <TabControl>
+        <TabItem Header="All plugins">
+            <my:AllPlugins x:Name="allPlugins"/>
+        </TabItem>
+        <TabItem Header="Installed" Name="tabItem1">
+            <my:InstalledPlugins x:Name="installedPlugins"/>
+        </TabItem>
+        <TabItem Header="History" Name="tabItem2">
+            <my1:History x:Name="history"/>
+        </TabItem>
+        <TabItem Header="Upload plugin" Name="tabItem3">
+            <my2:PluginUploaderDialog x:Name="pluginsUploader"/>
+        </TabItem>
+        <TabItem Header="Auto update" Name="tabItem4">
+            <my1:AutoUpdate x:Name="autoUpdate"/>
+        </TabItem>
+    </TabControl>
+</UserControl>

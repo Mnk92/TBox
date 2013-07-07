@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="Mnk.TBox.Plugins.Market.Client.Components.Uploaders.PluginUploaderDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" 
+             d:DesignHeight="380" d:DesignWidth="400" xmlns:my="clr-namespace:Mnk.Library.WpfControls.Components;assembly=Mnk.Library.WPFControls"
+             xmlns:EditButtons="clr-namespace:Mnk.Library.WpfControls.Components.EditButtons;assembly=Mnk.Library.WPFControls"
+             xmlns:captioned2="clr-namespace:Mnk.Library.WpfControls.Components.Captioned;assembly=Mnk.Library.WPFControls">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="64"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="64" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="130" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Plugin files:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <EditButtons:EditButtonsPanel Name="ebpPlugins" Grid.Row="1"  />
+        <my:ExtListBox x:Name="lbPlugins" Margin="2" Grid.Row="1" Grid.Column="1"  />
+
+        <Label Content="Dependencies:" Grid.Row="0" Grid.Column="2" />
+        <EditButtons:EditButtonsPanel Name="ebpDependencies" Grid.Row="1" Grid.Column="3" />
+        <my:ExtListBox x:Name="lbDependencies" Margin="2" Grid.Row="1" Grid.Column="2" />
+        
+        <Label Content="Description:" Grid.Row="2" Grid.ColumnSpan="2"/>
+        <TextBox Name="tbDescription" AcceptsReturn="True"  AcceptsTab="True" Grid.Row="3" Grid.ColumnSpan="2" TextChanged="UpdateButton" TextWrapping="Wrap" />
+        
+        <StackPanel Margin="2" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2" Grid.ColumnSpan="2">
+            <captioned2:CaptionedComboBox Name="cmbName" Caption="Name" ValueChanged="RefreshData"/>
+            <captioned2:CaptionedComboBox Name="cmbAuthor" Caption="Author"/>
+            <captioned2:CaptionedComboBox Name="cmbType" Caption="Type" ValueChanged="UpdateButton"/>
+        </StackPanel>
+        <StackPanel Name="spInfo" Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="5" Grid.ColumnSpan="3">
+            <Label Content="Date:"/>
+            <Label Content="_" Name="lDate"/>
+            <Label Content="Size:"/>
+            <Label Content="_" Name="lSize"/>
+            <Label Content="Downloads:"/>
+            <Label Content="_" Name="lDownloads"/>
+            <Label Content="Uploads:"/>
+            <Label Content="_" Name="lUploads"/>
+        </StackPanel>
+        <Button Name="btnRefresh" Content="Refresh" Margin="2" Grid.Row="6" Click="btnRefresh_Click"/>
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3">
+            <Button Name="btnDelete" Content="Delete" Margin="2" Width="72" Click="btnDelete_Click"/>
+            <Button Name="btnUpgrade" Content="Upgrade" Margin="2" Width="72" Click="btnUpgrade_Click"/>
+            <Button Name="btnUpload" Content="Upload" Margin="2" Width="72" Click="btnUpload_Click"/>
+        </StackPanel>
+        <StackPanel Name="spPluginOrDependency" Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="4">
+            <RadioButton Name="rbIsPlugin" Content="Is Plugin" Margin="5" IsChecked="True" Click="rbSetPluginOrDependency_Click"/>
+            <RadioButton Name="rbIsDependency" Content="Is Dependency" Margin="5" Click="rbSetPluginOrDependency_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2" Grid.Row="4" Grid.Column="2">
+            <RadioButton Name="rbIsAddMode" Content="Add mode" Margin="5" Click="rbIsAddOrEditMode_Click"/>
+            <RadioButton Name="rbIsEditMode" Content="Edit mode" Margin="5" IsChecked="True" Click="rbIsAddOrEditMode_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

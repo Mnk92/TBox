@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+  <?include Variables.wxi?>
+	<Fragment>
+    <DirectoryRef Id="ProgramMenuFolder">
+      <Directory Id="ApplicationProgramsFolder" Name="$(var.ProductName)">
+        <Component Id="ApplicationShortcut" Guid="*">
+          <Condition>INSTALLSTARTSHORTCUT</Condition>
+          <Shortcut Id="Shortcut"
+                Name="$(var.ProductName)"
+                Description="$(var.ProductName)"
+                Target="[INSTALLLOCATION]$(var.ProductName).exe"
+                WorkingDirectory="INSTALLLOCATION"/>
+          <Shortcut Id="Shortcut32"
+                Name="$(var.ProductName)32"
+                Description="$(var.ProductName)32"
+                Target="[INSTALLLOCATION]$(var.ProductName)32.exe"
+                WorkingDirectory="INSTALLLOCATION"/>
+          <util:InternetShortcut Id="Documentation"
+                Name="Online documentation"
+                Target="$(var.WebSite)"/>
+          <Shortcut Id="UninstallProduct"
+                Name="Uninstall $(var.ProductName)"
+                Target="[SystemFolder]msiexec.exe"
+                Arguments="/x [ProductCode]"
+                Description="Uninstalls $(var.ProductName)" />
+          <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+          <RegistryValue Root="HKCU" Key="Software\$(var.Manufacturer)\$(var.ProductName)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+        </Component>
+      </Directory>
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="DesktopFolder" >
+      <Component Id="ApplicationShortcutDesktop" Guid="7512B26A-66F4-4F18-923C-9E2509D6663C">
+        <Condition>INSTALLDESKTOPSHORTCUT</Condition>
+        <Shortcut Id="ApplicationShortcutDesktop"
+                  Name="$(var.ProductName)"
+                  Target="[INSTALLLOCATION]$(var.ProductName).exe"
+                  WorkingDirectory="INSTALLLOCATION"
+                    />
+        <RemoveFolder Id="DesktopFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="$(var.RegistryPath)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="StartupFolder" >
+      <Component Id="ApplicationShortcutStartup" Guid="9FC86F09-CD85-44D1-BEBA-7FB3BC5A48E6">
+        <Condition>INSTALLSTARTUPSHORTCUT</Condition>
+        <Shortcut Id="ApplicationShortcutStartup"
+                  Name="$(var.ProductName)"
+                  Target="[INSTALLLOCATION]$(var.ProductName).exe"
+                  WorkingDirectory="INSTALLLOCATION"
+                    />
+        <RemoveFolder Id="StartupFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="$(var.RegistryPath)" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

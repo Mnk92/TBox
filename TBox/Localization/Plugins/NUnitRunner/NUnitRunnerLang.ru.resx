@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Agent" xml:space="preserve">
+    <value>Агент</value>
+  </data>
+  <data name="BatchRun" xml:space="preserve">
+    <value>Пакетный запуск...</value>
+  </data>
+  <data name="BatchRunForUnitTests" xml:space="preserve">
+    <value>Пакетный запуск для тестов</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Категории</value>
+  </data>
+  <data name="CheckAll" xml:space="preserve">
+    <value>Выбрать все</value>
+  </data>
+  <data name="Clonning" xml:space="preserve">
+    <value>Клонирование</value>
+  </data>
+  <data name="CollapseAll" xml:space="preserve">
+    <value>Свернуть</value>
+  </data>
+  <data name="CommandToRunBeforeTests" xml:space="preserve">
+    <value>Команда для запуска до тестов</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Конфигурация</value>
+  </data>
+  <data name="ConfigureLibrariesWithUnitTests" xml:space="preserve">
+    <value>Конфигурация библиотек для тестов</value>
+  </data>
+  <data name="CopyDeep" xml:space="preserve">
+    <value>Глубина копирования</value>
+  </data>
+  <data name="CopyToSeparateFolders" xml:space="preserve">
+    <value>Копировать в отдельные папки</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="Displayed" xml:space="preserve">
+    <value>Отображающиеся:</value>
+  </data>
+  <data name="Errors" xml:space="preserve">
+    <value>Ошибок:</value>
+  </data>
+  <data name="ErrorsAndFailures" xml:space="preserve">
+    <value>Ошибки</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>Все кроме указанных</value>
+  </data>
+  <data name="ExpandAll" xml:space="preserve">
+    <value>Развернуть</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>Неудалось:</value>
+  </data>
+  <data name="FileMasksToCopy" xml:space="preserve">
+    <value>Маски на пути к файлам,которые надо скопировать</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>Отфильтровано:</value>
+  </data>
+  <data name="FolderToCloneTests" xml:space="preserve">
+    <value>Папки для клонирования тестов</value>
+  </data>
+  <data name="Framework" xml:space="preserve">
+    <value>Фрэймворк</value>
+  </data>
+  <data name="Ignored" xml:space="preserve">
+    <value>Проигнорировано:</value>
+  </data>
+  <data name="Include" xml:space="preserve">
+    <value>Только указанные</value>
+  </data>
+  <data name="Inconclusive" xml:space="preserve">
+    <value>Незавершённых:</value>
+  </data>
+  <data name="Invalid" xml:space="preserve">
+    <value>Недействительных:</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Сообщение</value>
+  </data>
+  <data name="Multithreading" xml:space="preserve">
+    <value>Многопоточность</value>
+  </data>
+  <data name="NunitDllsToRun" xml:space="preserve">
+    <value>Тестовые библиотеки для запуска</value>
+  </data>
+  <data name="Output" xml:space="preserve">
+    <value>Вывод</value>
+  </data>
+  <data name="Passed" xml:space="preserve">
+    <value>Прошло:</value>
+  </data>
+  <data name="PluginDescription" xml:space="preserve">
+    <value>Плагин для запуска NUnit тестов параллельно.</value>
+  </data>
+  <data name="PluginName" xml:space="preserve">
+    <value>Тестер</value>
+  </data>
+  <data name="ProcessCount" xml:space="preserve">
+    <value>Количество процессов</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="RunAsAdmin" xml:space="preserve">
+    <value>В режиме администратора</value>
+  </data>
+  <data name="RunAsx86" xml:space="preserve">
+    <value>В режиме x86</value>
+  </data>
+  <data name="SelectedItemInfo" xml:space="preserve">
+    <value>Информация о выбранном элементе</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="ShowOnlyFailed" xml:space="preserve">
+    <value>Показывать только непрошедшие</value>
+  </data>
+  <data name="ShowOnlyFailedTests" xml:space="preserve">
+    <value>Показывать только непрошедшие</value>
+  </data>
+  <data name="Skipped" xml:space="preserve">
+    <value>Пропущено:</value>
+  </data>
+  <data name="StackTrace" xml:space="preserve">
+    <value>Стек вызовов</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Старт</value>
+  </data>
+  <data name="StartDelay" xml:space="preserve">
+    <value>Задержка запуска (сек)</value>
+  </data>
+  <data name="Statistics" xml:space="preserve">
+    <value>Статистика</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="SynchronizeTestsAgents" xml:space="preserve">
+    <value>Синхронизация тестовых агентов</value>
+  </data>
+  <data name="Tests" xml:space="preserve">
+    <value>Тесты</value>
+  </data>
+  <data name="TestsNotRun" xml:space="preserve">
+    <value>Незапустившиеся тесты</value>
+  </data>
+  <data name="TestsResults" xml:space="preserve">
+    <value>Результаты тестов</value>
+  </data>
+  <data name="TestsStateTemplate" xml:space="preserve">
+    <value>{0} - тестов: [ {1} ], непрошедших = [ {2} ], время: {3}</value>
+  </data>
+  <data name="TestTime" xml:space="preserve">
+    <value>Время теста</value>
+  </data>
+  <data name="TextOutput" xml:space="preserve">
+    <value>Вывод</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Время:</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Всего:</value>
+  </data>
+  <data name="UncheckAll" xml:space="preserve">
+    <value>Убрать выделение</value>
+  </data>
+  <data name="UseCategories" xml:space="preserve">
+    <value>Использовать категории</value>
+  </data>
+  <data name="UsePrefetch" xml:space="preserve">
+    <value>Использовать статистику для оптимизации</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Вид</value>
+  </data>
+  <data name="ProcessMode" xml:space="preserve">
+    <value>Режим выполнения</value>
+  </data>
+  <data name="ConfigureTestSuites" xml:space="preserve">
+    <value>Настройка сборок тестов</value>
+  </data>
+  <data name="CantRefreshUnitTests" xml:space="preserve">
+    <value>Не могу обновить список тестов, укажите пожалуйста список библиотек для тестирования.</value>
+  </data>
+  <data name="Timeout" xml:space="preserve">
+    <value>Макс время теста (сек)</value>
+  </data>
+  <data name="FilesNotExistsOrInvalid" xml:space="preserve">
+    <value>Файлы не существуют или не подходят:</value>
+  </data>
+  <data name="TestLibrariesFileMasks" xml:space="preserve">
+    <value>Библиотека тестов (*.dll)|*.dll</value>
+  </data>
+  <data name="AssembliesCount" xml:space="preserve">
+    <value>К-во библиотек паралельно</value>
+  </data>
+</root>

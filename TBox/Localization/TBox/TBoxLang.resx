@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>TBox</value>
+  </data>
+  <data name="AuthorsInfo" xml:space="preserve">
+    <value>Created by Alex H (Mnk) from Brest.</value>
+  </data>
+  <data name="AutoUpdate" xml:space="preserve">
+    <value>Auto update</value>
+  </data>
+  <data name="BtnClose" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="BtnFastStart" xml:space="preserve">
+    <value>Fast Start</value>
+  </data>
+  <data name="BtnFeedback" xml:space="preserve">
+    <value>Send feedback</value>
+  </data>
+  <data name="BtnReload" xml:space="preserve">
+    <value>Reload</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="BtnSettings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Caption" xml:space="preserve">
+    <value>TBox</value>
+  </data>
+  <data name="ChangeLogTitle" xml:space="preserve">
+    <value>TBox was updated, the latest changes:</value>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Check for updates...</value>
+  </data>
+  <data name="ClearHistory" xml:space="preserve">
+    <value>Clear History</value>
+  </data>
+  <data name="ConfigureUserAction" xml:space="preserve">
+    <value>Configure user action</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreatePlugins" xml:space="preserve">
+    <value>Create plugins..</value>
+  </data>
+  <data name="DayOfTheWeek" xml:space="preserve">
+    <value>Day of the week:</value>
+  </data>
+  <data name="DayTime" xml:space="preserve">
+    <value>Day time:</value>
+  </data>
+  <data name="ErrorProcessingChangelog" xml:space="preserve">
+    <value>Error processing changelog</value>
+  </data>
+  <data name="FastStart" xml:space="preserve">
+    <value>Fast Start</value>
+  </data>
+  <data name="FeedbackCaption" xml:space="preserve">
+    <value>TBox - feedback</value>
+  </data>
+  <data name="FeedbackMessage" xml:space="preserve">
+    <value>Write some words or ideas about how to improve TBox. If you want to receive answer, please add your email :)</value>
+  </data>
+  <data name="FeedbackProgress" xml:space="preserve">
+    <value>Sending feedback</value>
+  </data>
+  <data name="FoundNewVersionTemplate" xml:space="preserve">
+    <value>Found new version: {0}, current version is: {1}. Do you want to update TBox?</value>
+  </data>
+  <data name="GlobalHotKeysAreEnabled" xml:space="preserve">
+    <value>Global HotKeys are enabled</value>
+  </data>
+  <data name="GlobalSettings" xml:space="preserve">
+    <value>Global settings</value>
+  </data>
+  <data name="HideOnCancel" xml:space="preserve">
+    <value>Hide on cancel</value>
+  </data>
+  <data name="HideOnSave" xml:space="preserve">
+    <value>Hide on save</value>
+  </data>
+  <data name="HotKeys" xml:space="preserve">
+    <value>HotKeys</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LicenseInfo" xml:space="preserve">
+    <value>Licensed under GPLv2 license.</value>
+  </data>
+  <data name="LifeTimeInfo" xml:space="preserve">
+    <value>In development since 2010.</value>
+  </data>
+  <data name="Localization" xml:space="preserve">
+    <value>Localization</value>
+  </data>
+  <data name="MaxItemsInHistory" xml:space="preserve">
+    <value>Max items in history</value>
+  </data>
+  <data name="MenuCheckUpdates" xml:space="preserve">
+    <value>Check updates</value>
+  </data>
+  <data name="MenuExit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="MenuFastStart" xml:space="preserve">
+    <value>Fast Start...</value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>Settings...</value>
+  </data>
+  <data name="MessageNoUpdatesFound" xml:space="preserve">
+    <value>No updates found</value>
+  </data>
+  <data name="NewVersionAvailable" xml:space="preserve">
+    <value>TBox - new version is available!</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="PathToTheErrorsDirectory" xml:space="preserve">
+    <value>Path to the errors directory:</value>
+  </data>
+  <data name="PathToTheMirrorDirectory" xml:space="preserve">
+    <value>Path to the mirror directory:</value>
+  </data>
+  <data name="Prepare" xml:space="preserve">
+    <value>Prepare...</value>
+  </data>
+  <data name="ProgressApplyChanges" xml:space="preserve">
+    <value>Apply changes...</value>
+  </data>
+  <data name="ProgressExit" xml:space="preserve">
+    <value>Exit...</value>
+  </data>
+  <data name="ProgressFinish" xml:space="preserve">
+    <value>Finish...</value>
+  </data>
+  <data name="ProgressInitialize" xml:space="preserve">
+    <value>Initialize...</value>
+  </data>
+  <data name="ProgressLoadingPlugins" xml:space="preserve">
+    <value>Loading plugins...</value>
+  </data>
+  <data name="ProgressReloadPluginsSettings" xml:space="preserve">
+    <value>Reload plugins settings...</value>
+  </data>
+  <data name="RecentActions" xml:space="preserve">
+    <value>Recent actions</value>
+  </data>
+  <data name="RestartNeeded" xml:space="preserve">
+    <value>Restart TBox will be requered to apply changes</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save...</value>
+  </data>
+  <data name="Scheduler" xml:space="preserve">
+    <value>Scheduler</value>
+  </data>
+  <data name="Schelduler" xml:space="preserve">
+    <value>Scheduler</value>
+  </data>
+  <data name="ScheldulerIsEnabled" xml:space="preserve">
+    <value>Scheduler is enabled</value>
+  </data>
+  <data name="ScriptsPaths" xml:space="preserve">
+    <value>Scripts paths</value>
+  </data>
+  <data name="SelectMenuActions" xml:space="preserve">
+    <value>Select menu actions</value>
+  </data>
+  <data name="SendErrorReports" xml:space="preserve">
+    <value>Send error reports</value>
+  </data>
+  <data name="SettingsCaption" xml:space="preserve">
+    <value>Global settings</value>
+  </data>
+  <data name="SettingsDescription" xml:space="preserve">
+    <value>Here you can configure global settings of this tool</value>
+  </data>
+  <data name="ShortcutToAutorun" xml:space="preserve">
+    <value>Shortcut to autorun</value>
+  </data>
+  <data name="ShortcutToDesktop" xml:space="preserve">
+    <value>Shortcut to desktop</value>
+  </data>
+  <data name="ShowChangelogOnUpdate" xml:space="preserve">
+    <value>Show changelog on update</value>
+  </data>
+  <data name="ShowSettingsBySingleClickOnTrayIcon" xml:space="preserve">
+    <value>Show settings by single click on tray icon</value>
+  </data>
+  <data name="StartHidden" xml:space="preserve">
+    <value>Start hidden</value>
+  </data>
+  <data name="TabsEnabledPlugins" xml:space="preserve">
+    <value>Manage Plugins</value>
+  </data>
+  <data name="TeamWorkSettings" xml:space="preserve">
+    <value>Team work settings</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme:</value>
+  </data>
+  <data name="ToolTipFeedback" xml:space="preserve">
+    <value>Help author to improve this tool</value>
+  </data>
+  <data name="ToolTipTemplate" xml:space="preserve">
+    <value>TBox. Load {0} plugin(s).</value>
+  </data>
+  <data name="UpdateDisabledItems" xml:space="preserve">
+    <value>Update disabled items...</value>
+  </data>
+  <data name="UpdateFromSharedFolder" xml:space="preserve">
+    <value>Update from shared folder</value>
+  </data>
+  <data name="UpdateInterval" xml:space="preserve">
+    <value>Update interval:</value>
+  </data>
+  <data name="Usability" xml:space="preserve">
+    <value>Usability</value>
+  </data>
+  <data name="UseGPUForUIRender" xml:space="preserve">
+    <value>Use GPU for UI render</value>
+  </data>
+  <data name="UserActions" xml:space="preserve">
+    <value>User actions</value>
+  </data>
+  <data name="UseTrayMenuWithIcons" xml:space="preserve">
+    <value>Use tray menu with icons</value>
+  </data>
+  <data name="VersionTemplate" xml:space="preserve">
+    <value>Version: {0}.{1}</value>
+  </data>
+  <data name="WebSite" xml:space="preserve">
+    <value>Web site:</value>
+  </data>
+  <data name="Shortcuts" xml:space="preserve">
+    <value>Shortcuts</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Database" xml:space="preserve">
+    <value>Plugins: Database</value>
+  </data>
+  <data name="DefaultMainViewDescription" xml:space="preserve">
+    <value>Please, choose item to configure and click on it.</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>Plugins: Desktop</value>
+  </data>
+  <data name="Development" xml:space="preserve">
+    <value>Plugins: Development</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Plugins: Other</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="Web" xml:space="preserve">
+    <value>Plugins: Web</value>
+  </data>
+  <data name="BtnHelp" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="FastStartDescription" xml:space="preserve">
+    <value>Here you can run fast called commands or you own user actions</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Blog:</value>
+  </data>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>Change log</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="PortableMode" xml:space="preserve">
+    <value>Store configuration files in the TBox folder</value>
+  </data>
+  <data name="Aliases" xml:space="preserve">
+    <value>Aliases</value>
+  </data>
+  <data name="ConfigureAlias" xml:space="preserve">
+    <value>Configure alias</value>
+  </data>
+</root>

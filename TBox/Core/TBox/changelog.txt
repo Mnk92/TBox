@@ -1,0 +1,107 @@
+﻿21/12/2014 Add File Masks for path getters
+
+21/12/2014 Add ability to execute multiply tests assemblies in parallel
+
+20/12/2014 Add aliases for file pathes, according to the MeL suggestion.
+
+19/12/2014 Add Reordering for ListBoxes. Refactor group operations for ProjectMan, according Cyberix suggestion.
+
+3/11/2014 Bugfixing. Add ability to send logs to the developers. Fix some win8 issues.
+
+2/11/2014 Add XsltTester plugin, Add ability to go to folder to searcher, Fix Ui issues in NunitTestsRunner. Add XsltTester plugin
+
+30/05/2014 Add beta version of the SkyNet. Now ConsoleNunitRunner support multiply assemblies, thanks to DanielRose. Add ability to specify characters to the Searcher.
+
+17/05/2014 Add LocalizationTool plugin. Fix some issues.
+
+30/03/2014 Add Notes and Passwords Storage plugins. Fix validation
+
+24/01/2014 Add long file paths support for Searcher plugin. Fix projectMan readonly combobox build issue.
+
+10/01/2014 Bug fixing. Rename namespaces. Add ability to view tests while running for nunit tests runner. Add team reports for team manager.
+
+26/11/2013 Add ability to specify file path masks to copy and start delay for NUnit tests runner. Fix issue and add time instead seconds for progress.
+
+07/11/2013 Finish TeamManager
+
+03/11/2013 Add portable mode
+
+31/10/2013 Start working on SkyNet
+
+25/10/2013 Bugfixing
+
+15/10/2013 Fix hot keys for user actions. Update team manager. Update main window style.
+
+14/10/2013 Fix gramma mistakes. Fix issues in authomater and script runner. Update UI
+
+10/01/2013 Fix tools issues, fix authomater issue, fix localization issues, add new TeamManager plugin.
+
+08/10/2013 Update UI. Try to make it more userfrendly
+
+03/10/2013 Add localization support. Add russian translation
+
+25/09/2013 Bugfixing, optimize search
+
+24/09/2013 Fix feedback service issues
+
+22/09/2013 Memory usage optiomizations. Add ability to disable GPU acceleration for Ui
+
+14/08/2013 Add autoupdate from tbox website. Add ability for user to send feedback. Big ui and styles fixes. Implement new teamwork functionality. Extend default configurations for plugins.
+
+08/08/2013 Add wix installer. Fix multithreading issues. Bug fixing.
+
+02/08/2013 Big bugfixing. Add ability to specify clone folder for unit tests, add ability to run command before tests.
+
+12/07/2013 Add console unit tests runner, to use with CI. This subtool generate valid xml report.
+
+08/07/2013 Add optional transactions for sql Runner. Optimize restart for services commander. Add support for build files for project manager.
+
+05/07/2013 Add filtering unit test by name. add build build files for project manager
+
+03/07/2013 Move sources and documentation to http://tbox.codeplex.com
+
+19/06/2013 Add x86 support for AnyCpu TBox, for parallel unit tests runner. Fix critical issue with progressbar. Update usage license. Update searcher - now it clear previous index on reindex end.
+
+02/06/2013 Add fast start window.
+
+24/05/2013 Optimize automater compiler speed - reduce library load time and add caching. Add script to clear folders. Add time logging for slow operations.
+
+22/04/2013 Add save for dialogs positions. Add synchronizer for parallel nunit runner - final teardown of one of the tests assemblies can't break other tests assemblies. Many fixes for searcher (error on reload, non ASCII characters in UTF8 files, crash on empty viewer, open search calls). Fix service commander to show displayName, not name.
+
+05/04/2013 Add ability to open main window with double click. Add simple full text search for searcher.
+
+01/04/2013 Add link to TBox web site.
+
+26/03/2013 Add multithreaded nunit runner. Also it can run simple tests, much faster than standart nunit. Add some wpf perfomance optimizations.
+
+19/03/2013 Add Request watcher plugin, based on tracing. Allow to view requests, also build graphic request scheme at realtime.
+
+16/3/2013 Optimize .net compilation for Automater. Migrate all config files to JSON. Add info logging for slow code.
+
+12/3/2013 Add ellipsis and tooltips for long texts, fix listboxes content to fit to width, add enable\disable for checkablelistbox items. Refactor file text boxes to allow select file from previously selected files or folders.
+
+06/03/2013 Add availability checker plugin. Check by timer, availability of the shared folders and web sites.
+
+05/03/2013 Add schelduler to all plugins, refactor hotkeys manager to allow use all menu items. ProjectMan can show you, all your svn changes ;)
+
+25/02/2013 Add batch support for sql runner. Add script to optimize solution.
+
+20/02/2013 Fix syntax highlightor selection for non english characters. Fix cyclic error message issue for File and Sql watchers.
+
+19/02/2013 Add cirylic support for searcher, fix resx highliht.
+
+18/02/2013 fix menu items updating on menu changed event. Fix menu issues for Searcher, File and Sql watchers. Add multithreading for directory processor. Add scripts to Automater. Fix issue with mutexes on startup. Add batch operations for ConsoleScriptRunner.
+
+11/02/2013 finish sql runner plugin. Fix long loading issue with printers.
+
+09/02/2013 restore localizer settings dialog. Add regexp to filter FileWatcher entries, add callstack collapsing. Add basic implementation of the SqlRunner plugin. Add new ServicesCommander plugin.
+
+02/02/2013 usability fixes. Add changelog text on settings. Add run all for automater. Fix WPF dispatcher deadlock on save for some plugins. Optimize perfomance for file watcher plugins. Rename table maker to the Text generator, add ability to generate text.
+
+26/01/2013 refactor templates plugin - add parameters save/load and strings operations. Refactor dialogs subsystem - add caching to preserver memory usage. Add dictionary parameters to the Automater. Create console scripts runner. Add update and build functionality to projectMan, add progress. Add stop all dev servers command to devserver runner.
+
+24/01/2013 add scripts to automater, fix assembly collecting. fix ProjectManager - now it stops if msbuild fails.
+23/01/2013 add to automater plugin parameters support (bool,string,guid,int,double,filePath,folderPath,string[],guid[],int[],double[],filePath[],folderPath[]) with restrictions and validations, also provide merging and save/load for it. From now you can write and run you own scripts.
+20/01/2013 fix usability issues(exit on esc, combobox select issue and close dialog before progress for requestor). Add UI for automater plugin. Move all libraries to Libraries folder.
+17/01/2013 fix graphics update on resize, improve low quality mode. Add posibility to view and change graphics and statistics while it works on the Ddoser plugin, fix usability issues and big analizer refactoring.
+16/01/2013 fix AppConfigManager and Requestor plugins save crash. Many improovments to the graphics engine, add low quality mode. Add changelog dialog.

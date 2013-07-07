@@ -1,0 +1,77 @@
+﻿<Dialogs:DialogWindow x:Class="Mnk.TBox.Core.Application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:loc="clr-namespace:Mnk.TBox.Core.Application.Code.Localization"
+        xmlns:Dialogs="clr-namespace:Mnk.Library.WpfControls.Dialogs;assembly=Mnk.Library.WPFControls"
+                      xmlns:buttonsView="clr-namespace:Mnk.Library.WpfControls.Components.ButtonsView;assembly=Mnk.Library.WPFControls"
+                      Title="{loc:Tr Caption}" 
+        Icon="/TBox;component/Resources/Icon.ico" 
+        Width="600" Height="600" 
+        MinWidth="600" MinHeight="600" 
+        WindowState="Normal" ShowInTaskbar="True">
+    <Window.Resources>
+        <RoutedUICommand x:Key="Help"/>
+        <RoutedUICommand x:Key="Back"/>
+    </Window.Resources>
+
+    <Window.CommandBindings>
+        <CommandBinding Command="{StaticResource Help}" 
+                    Executed="BtnHelpClick" />
+        <CommandBinding Command="{StaticResource Back}" 
+                    Executed="BackClick" />
+    </Window.CommandBindings>
+
+    <Window.InputBindings>
+        <KeyBinding Key="F1" Command="{StaticResource Help}" />
+        <KeyBinding Key="Back" Command="{StaticResource Back}" />
+    </Window.InputBindings>
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Top" >
+            <Button Name="BtnBack" IsEnabled="False" DockPanel.Dock="Left" Command="{StaticResource Back}">
+                <StackPanel Orientation="Horizontal">
+                    <Image  Width="24" Height="24" Source="/TBox;component/Resources/Back.ico" Stretch="None"/>
+                    <TextBlock Text="{loc:Tr Back}" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button DockPanel.Dock="Right"  Command="{StaticResource Help}" >
+                <StackPanel Orientation="Horizontal">
+                    <Image  Width="24" Height="24" Source="/TBox;component/Resources/Help.ico" Stretch="None"/>
+                    <TextBlock Text="{loc:Tr BtnHelp}" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <TextBlock Name="Description" Text="{loc:Tr DefaultMainViewDescription}" Margin="5" TextWrapping="Wrap" TextAlignment="Center" VerticalAlignment="Center"/>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Bottom" Margin="10">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" >
+                <Button Name="btnSave"  Click="BtnSaveClick" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Width="24" Height="24" Source="/TBox;component/Resources/Save.ico" Stretch="None"/>
+                        <TextBlock Text="{loc:Tr BtnSave}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Button Name="btnReload" Click="BtnReloadClick"  >
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Width="24" Height="24" Source="/TBox;component/Resources/Refresh.ico" Stretch="None"/>
+                        <TextBlock Text="{loc:Tr BtnReload}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+                <Button Name="btnClose" IsCancel="True" Click="BtnCloseClick" >
+                    <StackPanel Orientation="Horizontal">
+                        <Image  Width="24" Height="24" Source="/TBox;component/Resources/Minimize.ico" Stretch="None"/>
+                        <TextBlock Text="{loc:Tr BtnClose}" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Button>
+            </StackPanel>
+            <Button Name="Feedback" Click="SendFeedback" ToolTip="{loc:Tr ToolTipFeedback}" DockPanel.Dock="Left" >
+                <StackPanel Orientation="Horizontal">
+                    <Image  Width="24" Height="24" Source="/TBox;component/Resources/Feedback.ico" Stretch="None"/>
+                    <TextBlock Text="{loc:Tr BtnFeedback}" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Label/>
+        </DockPanel>
+        <ContentControl Name="PluginsBack" Margin="5,2,5,5">
+            <buttonsView:GroupedList AllowDrop="False" Name="View" Margin="0" Padding="0"/>
+        </ContentControl>
+    </DockPanel>
+</Dialogs:DialogWindow>

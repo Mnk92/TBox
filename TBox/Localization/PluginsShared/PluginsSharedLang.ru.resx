@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AreYouWantToSaveChanges" xml:space="preserve">
+    <value>Текущий файл изменился. Желаете ли вы сохранить изменения?</value>
+  </data>
+  <data name="AverageTime" xml:space="preserve">
+    <value>Среднее время</value>
+  </data>
+  <data name="Body" xml:space="preserve">
+    <value>Тело:</value>
+  </data>
+  <data name="Build" xml:space="preserve">
+    <value>Построить</value>
+  </data>
+  <data name="Building" xml:space="preserve">
+    <value>Построение...</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="CompilationTimeTemplate" xml:space="preserve">
+    <value>Скомпилировано за: {0}мс.</value>
+  </data>
+  <data name="CompilationTimeTemplate1" xml:space="preserve">
+    <value>Скомпилировано за: {0}мс.</value>
+  </data>
+  <data name="Configure" xml:space="preserve">
+    <value>Настроить</value>
+  </data>
+  <data name="ConfigureDirectoryPath" xml:space="preserve">
+    <value>Настройка пути к директории</value>
+  </data>
+  <data name="ConfigureDouble" xml:space="preserve">
+    <value>Настройка вещественного числа</value>
+  </data>
+  <data name="ConfigureFilePath" xml:space="preserve">
+    <value>Настройка пути к файлу</value>
+  </data>
+  <data name="ConfigureGuid" xml:space="preserve">
+    <value>Настройка GUID</value>
+  </data>
+  <data name="ConfigureInt" xml:space="preserve">
+    <value>Настройка целого числа</value>
+  </data>
+  <data name="ConfigureItem" xml:space="preserve">
+    <value>Настройка элемента</value>
+  </data>
+  <data name="ConfigureScriptPackages" xml:space="preserve">
+    <value>Настройка сборки скриптов</value>
+  </data>
+  <data name="ConfigureString" xml:space="preserve">
+    <value>Настройка строки</value>
+  </data>
+  <data name="CopyResultsToClipboard" xml:space="preserve">
+    <value>Копировать результаты в буфер обмена</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Количество</value>
+  </data>
+  <data name="Ddos" xml:space="preserve">
+    <value>DDOS</value>
+  </data>
+  <data name="EntriesCountTemplate" xml:space="preserve">
+    <value>{0}. Количество записей: {1}.</value>
+  </data>
+  <data name="FinishClonningUnitTestsFolder" xml:space="preserve">
+    <value>Завершаю клонирование папок с модульными тестами</value>
+  </data>
+  <data name="Format" xml:space="preserve">
+    <value>Формат:</value>
+  </data>
+  <data name="Graphics" xml:space="preserve">
+    <value>Графики</value>
+  </data>
+  <data name="Headers" xml:space="preserve">
+    <value>Заголовки:</value>
+  </data>
+  <data name="Install" xml:space="preserve">
+    <value>Установить</value>
+  </data>
+  <data name="MaxTime" xml:space="preserve">
+    <value>Макс.Время</value>
+  </data>
+  <data name="MinTime" xml:space="preserve">
+    <value>Мин.Время</value>
+  </data>
+  <data name="NoErrors" xml:space="preserve">
+    <value>Без ошибок</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Обновить</value>
+  </data>
+  <data name="Reload" xml:space="preserve">
+    <value>Перезагрузить</value>
+  </data>
+  <data name="Reloading" xml:space="preserve">
+    <value>Перезагрузка...</value>
+  </data>
+  <data name="RequestsDelay" xml:space="preserve">
+    <value>Задержка:</value>
+  </data>
+  <data name="ResponseTime" xml:space="preserve">
+    <value>Время ответа ( Мин - Средн. - Макс )</value>
+  </data>
+  <data name="Run" xml:space="preserve">
+    <value>Запустить</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="ScriptsPackageParameters" xml:space="preserve">
+    <value>Введите значения параметров скриптов:</value>
+  </data>
+  <data name="SelectSctipt" xml:space="preserve">
+    <value>Выбрать скрипт</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="SourcesEditor" xml:space="preserve">
+    <value>Редактор исходного кода</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Старт</value>
+  </data>
+  <data name="StartClonningUnitTestsFolder" xml:space="preserve">
+    <value>Начинаю клонирование папок с модульными тестами</value>
+  </data>
+  <data name="Statistic" xml:space="preserve">
+    <value>Статистика</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Стоп</value>
+  </data>
+  <data name="TestTime" xml:space="preserve">
+    <value>Время тестирования</value>
+  </data>
+  <data name="Threads" xml:space="preserve">
+    <value>Потоков:</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Время</value>
+  </data>
+  <data name="Timeout" xml:space="preserve">
+    <value>Задержка:</value>
+  </data>
+  <data name="Uninstall" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+</root>

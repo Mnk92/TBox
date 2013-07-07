@@ -1,0 +1,41 @@
+body{
+background-color: black;
+}
+
+.person 
+{
+    margin-left: 20px;
+	font-weight: bolder;
+}
+
+table
+{
+    margin: 10px 10px 10px 20px;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+ tr
+ {
+   height:15px;
+ }
+ td
+ {
+ text-align: center;
+ border: 1px solid black;
+ padding: 2;
+ }
+.header,
+.footer {
+    background: #b0c4dd;
+    font-weight: bolder;
+}
+
+.holyday
+{
+    background: #e6e6e6;
+}
+
+.error
+{
+    background: #f84935;
+}

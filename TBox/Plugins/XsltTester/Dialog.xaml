@@ -1,0 +1,58 @@
+﻿<dialogs:DialogWindow x:Class="Mnk.TBox.Plugins.XsltTester.Dialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:dialogs="clr-namespace:Mnk.Library.WpfControls.Dialogs;assembly=Mnk.Library.WpfControls"
+             xmlns:loc="clr-namespace:Mnk.TBox.Plugins.XsltTester.Code.Localization"
+             xmlns:wpfSyntaxHighlighter="clr-namespace:Mnk.Library.WpfSyntaxHighlighter;assembly=Mnk.Library.WpfSyntaxHighlighter"
+             xmlns:components="clr-namespace:Mnk.Library.WpfControls.Components;assembly=Mnk.Library.WpfControls"
+             xmlns:units="clr-namespace:Mnk.Library.WpfControls.Components.Units;assembly=Mnk.Library.WpfControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             ShowInTaskbar="True" Title="{loc:Tr PluginName}"
+             Width="640" Height="480"
+             FocusManager.FocusedElement="{Binding ElementName=RegExp}"
+             MinWidth="640" MinHeight="480">
+    <DockPanel>
+        <units:ComboBoxUnit ItemsSource="{Binding Profiles}" Name="Profiles" UnitType="Text" Title="{loc:Tr ConfigureProfile}" DockPanel.Dock="Top" ValueCaption="{Binding SelectedProfile}" />
+        <DockPanel Margin="5" DataContext="{Binding ElementName=Profiles, Path=SelectedValue }" IsEnabled="{Binding ElementName=Profiles,Path=IsSelected}">
+            <StatusBar DockPanel.Dock="Bottom">
+                <StatusBarItem Content="{loc:Tr Time}"/>
+                <StatusBarItem Name="sbTime"/>
+                <StatusBarItem Name="sbErrorCaption" Content="{loc:Tr Error}" Background="Red" Visibility="Hidden"/>
+                <StatusBarItem Name="sbError" Background="Red" Visibility="Hidden"/>
+            </StatusBar>
+            <StackPanel DockPanel.Dock="Bottom" HorizontalAlignment="Right" Orientation="Horizontal">
+                <components:ExtCheckBox Name="TestManual" Margin="2,0" IsChecked="{Binding TestManual}" Content="{loc:Tr TestManual}" VerticalAlignment="Center"/>
+                <components:ExtCheckBox Name="AutoFormatResult" Margin="2,0" IsChecked="{Binding AutoFormatResult}" Content="{loc:Tr AutoFormatResult}" VerticalAlignment="Center" ValueChanged="OnTextChanged"/>
+                <Button Content="{loc:Tr Execute}" IsEnabled="{Binding IsChecked, ElementName=TestManual}" Click="ButtonTestClick" />
+                <Button Content="{loc:Tr Cancel}" Click="CancelClick" IsCancel="True"/>
+            </StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition MinHeight="64"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition MinHeight="64"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition MinHeight="64"/>
+                </Grid.RowDefinitions>
+                <DockPanel Grid.Row="0">
+                    <Label Content="{loc:Tr Xml}" DockPanel.Dock="Top" Padding="5,0"/>
+                    <wpfSyntaxHighlighter:SyntaxHighlighter Name="Xml" Text="{Binding Xml}" IsWordWrap="{Binding ElementName=Results, Path=IsWordWrap}" IsWhiteSpaces="{Binding ElementName=Results, Path=IsWhiteSpaces}" Format="{Binding ElementName=Results, Path=Format}" TextChanged="OnTextChanged" IsStatusBarVisible="False"/>
+                </DockPanel>
+                <GridSplitter HorizontalAlignment="Stretch" Grid.Row="1"/>
+                <DockPanel Grid.Row="2">
+                    <Label Content="{loc:Tr Xslt}" DockPanel.Dock="Top" Padding="5,0"/>
+                    <wpfSyntaxHighlighter:SyntaxHighlighter Name="Xslt" Text="{Binding Xslt}" IsWordWrap="{Binding ElementName=Results, Path=IsWordWrap}" IsWhiteSpaces="{Binding ElementName=Results, Path=IsWhiteSpaces}" Format="{Binding ElementName=Results, Path=Format}" TextChanged="OnTextChanged" IsStatusBarVisible="False" />
+                </DockPanel>
+                <GridSplitter HorizontalAlignment="Stretch" Grid.Row="3"/>
+                <DockPanel Grid.Row="4">
+                    <Label Content="{loc:Tr Results}" DockPanel.Dock="Top" Padding="5,0"/>
+                    <wpfSyntaxHighlighter:SyntaxHighlighter Name="Results" Text="{Binding Results}" Format="xml" IsWordWrap="True" IsReadOnly="True" />
+                </DockPanel>
+            </Grid>
+        </DockPanel>
+    </DockPanel>
+
+</dialogs:DialogWindow>

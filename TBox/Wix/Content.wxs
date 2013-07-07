@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Variables.wxi?>
+	<Fragment>
+    <DirectoryRef Id="INSTALLLOCATION" FileSource="..\bin\Release\" >
+      <Directory Id="Data" Name="Data">
+        <Directory Id="Automater" Name="Automater" >
+          <Directory Id="Scripts" Name="Scripts">
+            <Component Id="AutomaterMsc" Guid="4928F203-E455-475C-B093-F53B734530BF">
+              <File Name='AddTracing.cs'/>
+              <File Name='ClearFolders.cs'/>
+              <File Name='EnableFeatures.cs'/>
+              <File Name='ExecuteCommands.cs'/>
+              <File Name='OptimizeSolution.cs'/>
+              <File Name='params.cs'/>
+              <File Name='PutObjects.cs'/>
+              <File Name='PutResources.cs'/>
+              <File Name='RunDevServers.cs'/>
+              <File Name='SelectDatabases.cs'/>
+              <File Name='StopDevServers.cs'/>
+            </Component>
+          </Directory>
+          <Component Id="Automater" Guid="5A061B69-86E0-40CD-A474-0E013E4684E1">
+            <File Name='Runner.cs'/>
+            <File Name='Solution.csproj'/>
+            <File Name='Solution.sln'/>
+          </Component>
+        </Directory>
+        <Directory Id="ProjectMan" Name="ProjectMan">
+          <Component Id="ProjectMan" Guid="6DC7D5CC-A546-4A41-AE15-0FC499E15D73">
+            <CreateFolder/>
+          </Component>
+        </Directory>
+        <Directory Id="SkyNet" Name="SkyNet" >
+          <Component Id="SkyNet" Guid="02c25418-9a2b-4bcb-920f-1b484903774c">
+            <File Name='NUnitTests.cs'/>
+            <File Name='Factorial.cs'/>
+          </Component>
+        </Directory>
+        <Directory Id="TeamManager" Name="TeamManager">
+			    <Directory Id="TeamManagerDataProviders" Name="DataProviders">
+				  <Component Id="TeamManagerDataProviders" Guid="04262763-3CF3-4640-90C4-6EC97CFFC14E">
+				    <File Name='SubversionScript.cs'/>
+				    <File Name='TargetProcessScript.cs'/>
+				  </Component>
+			    </Directory>
+			    <Directory Id="TeamManagerStyles" Name="Styles">
+				  <Component Id="TeamManagerStyles" Guid="0E16837C-1DCC-496A-9057-85F0D0D5ADE9">
+				    <File Name='dark.css'/>
+				    <File Name='default.css'/>
+				  </Component>
+			    </Directory>
+			    <Directory Id="TeamManagerValidators" Name="Validators">
+				  <Component Id="TeamManagerValidators" Guid="613125DD-6C2A-4B87-9019-232FE70FBFCB">
+				    <File Name='Default.cs'/>
+				  </Component>
+			    </Directory>
+        </Directory>
+        <Directory Id="Templates" Name="Templates" >
+          <Directory Id="TemplatesSample" Name="Sample">
+            <Component Id="TemplatesSample" Guid="B31CFEB1-760F-4CB8-A608-BB57B724B6AE">
+              <File Name='{#test#}.cs'/>
+            </Component>
+          </Directory>
+          <Component Id="Templates" Guid="FF5BB7D8-7E57-42B2-810D-9AB5D7DAABEF">
+            <CreateFolder/>
+          </Component>
+        </Directory>
+      </Directory>
+      <Directory Id="Libraries" Name="Libraries">
+        <Component Id="Libraries" Guid="A7042115-AEAB-4632-A691-38B8AF4D7CC7">
+          <File Name='Ionic.Zip.dll'/>
+          <File Name='LightInject.dll'/>
+          <File Name='Microsoft.Exchange.WebServices.dll'/>
+          <File Name='Microsoft.Windows.Shell.dll'/>
+          <File Name='Mnk.Library.CodePlex.dll'/>
+          <File Name='Mnk.Library.Common.dll'/>
+          <File Name='Mnk.Library.ParallelNUnit.dll'/>
+          <File Name='Mnk.Library.ScriptEngine.dll'/>
+          <File Name='Mnk.Library.WPFControls.dll'/>
+          <File Name='Mnk.Library.WPFSyntaxHighlighter.dll'/>
+          <File Name='Mnk.Library.WPFWinForms.dll'/>
+          <File Name='Mnk.TBox.Core.Contracts.dll'/>
+          <File Name='Mnk.TBox.Core.PluginsShared.dll'/>
+          <File Name='Mnk.TBox.Tools.SkyNet.Common.dll'/>
+          <File Name='nunit.core.dll'/>
+          <File Name='nunit.core.interfaces.dll'/>
+          <File Name='nunit.util.dll'/>
+          <File Name='Ookii.Dialogs.Wpf.dll'/>
+          <File Name='RibbonControlsLibrary.dll'/>
+          <File Name='ServiceStack.Text.dll'/>
+          <File Name='ScintillaNet.dll'/>
+          <File Name='ZetaLongPaths.dll'/>
+          <File Name='WpfAnimatedGif.dll'/>
+        </Component>
+      </Directory>
+      <Directory Id='Localization' Name='Localization'>
+          <Directory Id='LocalizationRu' Name='ru'>
+          <Component Id="LocalizationRu" Guid="55FD1A00-8C2B-4A2F-BFC8-36DAD7DEBB23">
+            <File Name='Mnk.Library.Localization.resources.dll'/>
+            <File Name='Mnk.TBox.Locales.Localization.resources.dll'/>
+          </Component>
+        </Directory>
+        <Component Id="Localization" Guid="31159BD2-D560-4D0C-8DF5-D29479F09785">
+          <File Name='Mnk.Library.Localization.dll'/>
+          <File Name='Mnk.TBox.Locales.Localization.dll'/>
+        </Component>
+      </Directory>
+      <Directory Id='Plugins' Name='Plugins'>
+        <Component Id="Plugins" Guid="B194EA31-6D91-4383-AC4E-CF8173784F35">
+          <File Name='Mnk.TBox.Plugins.AppConfigManager.dll'/>
+          <File Name='Mnk.TBox.Plugins.Automator.dll'/>
+          <File Name='Mnk.TBox.Plugins.AvailabilityChecker.dll'/>
+          <File Name='Mnk.TBox.Plugins.BookletPagesGenerator.dll'/>
+          <File Name='Mnk.TBox.Plugins.DevServerRunner.dll'/>
+          <File Name='Mnk.TBox.Plugins.DirectoryProcessor.dll'/>
+          <File Name='Mnk.TBox.Plugins.Encoder.dll'/>
+          <File Name='Mnk.TBox.Plugins.FileWatcher.dll'/>
+          <File Name='Mnk.TBox.Plugins.HtmlPad.dll'/>
+          <File Name='Mnk.TBox.Plugins.LeaksInterceptor.dll'/>
+          <File Name='Mnk.TBox.Plugins.LocalizationTool.dll'/>
+          <File Name='Mnk.TBox.Plugins.Notes.dll'/>
+          <File Name='Mnk.TBox.Plugins.NUnitRunner.dll'/>
+          <File Name='Mnk.TBox.Plugins.PasswordsStorage.dll'/>
+          <File Name='Mnk.TBox.Plugins.ProjectMan.dll'/>
+          <File Name='Mnk.TBox.Plugins.RegExpTester.dll'/>
+          <File Name='Mnk.TBox.Plugins.Requestor.dll'/>
+          <File Name='Mnk.TBox.Plugins.RequestsWatcher.dll'/>
+          <File Name='Mnk.TBox.Plugins.Searcher.dll'/>
+          <File Name='Mnk.TBox.Plugins.ServicesCommander.dll'/>
+          <File Name='Mnk.TBox.Plugins.SkyNet.dll'/>
+          <File Name='Mnk.TBox.Plugins.SourcesUniter.dll'/>
+          <File Name='Mnk.TBox.Plugins.SqlRunner.dll'/>
+          <File Name='Mnk.TBox.Plugins.SqlWatcher.dll'/>
+          <File Name='Mnk.TBox.Plugins.TeamManager.dll'/>
+          <File Name='Mnk.TBox.Plugins.Templates.dll'/>
+          <File Name='Mnk.TBox.Plugins.TextGenerator.dll'/>
+          <File Name='Mnk.TBox.Plugins.XsltTester.dll'/>
+        </Component>
+      </Directory>
+      <Directory Id="Themes" Name="Themes">
+        <Component Id="Themes" Guid="dbcbef7c-89cf-49c7-92c3-e73f9f7d3146">
+          <File Name='Default.xaml'/>
+        </Component>
+      </Directory>
+      <Directory Id="Tools" Name="Tools">
+        <Component Id="Tools" Guid="f692d112-c019-491e-8f0d-d9953fdc85fd">
+          <File Name='build_build.cmd'/>
+          <File Name='build_project.cmd'/>
+          <File Name='RunAsx86.exe'/>
+          <File Name='sudo.exe'/>
+          <File Name='ConsoleScriptRunner.exe'/>
+          <File Name='ConsoleUnitTestsRunner.exe'/>
+          <File Name='ConsoleUnitTestsRunner32.exe'/>
+          <File Name='Mnk.TBox.Tools.SkyNet.Server.exe'/>
+          <File Name='Mnk.TBox.Tools.SkyNet.Agent.exe'/>
+          <File Name='NUnitAgent.exe'/>
+        </Component>
+      </Directory>
+      <Component Id="Binaries" Guid="0439B8A8-E960-4D96-808A-052940992E18">
+        <File Name='changelog.txt'/>
+        <File Name='License.rtf'/>
+        <File Name='SciLexer64.dll'/>
+        <File Name='SciLexer.dll'/>
+        <File Name='TBox.exe' Id='Application.exe' KeyPath='yes'/>
+        <File Name='TBox.exe.config'/>
+        <File Name='TBox32.exe'/>
+        <File Name='TBox32.exe.config'/>
+      </Component>
+      <Component Id="RegistryEntries" Guid="39C14E49-9D20-4E98-B590-0E498D38D17D">
+        <RegistryKey Root="HKCU" Key="$(var.RegistryPath)">
+          <RegistryValue Type="string" Name="InstallDir" Value="[INSTALLLOCATION]" />
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+	</Fragment>
+</Wix>

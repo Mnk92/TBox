@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppName" xml:space="preserve">
+    <value>TBox</value>
+  </data>
+  <data name="AuthorsInfo" xml:space="preserve">
+    <value>Автор: Саня (Mnk) из г. Бреста.</value>
+  </data>
+  <data name="AutoUpdate" xml:space="preserve">
+    <value>Автоматическое обновление</value>
+  </data>
+  <data name="BtnClose" xml:space="preserve">
+    <value>Закрыть</value>
+  </data>
+  <data name="BtnFastStart" xml:space="preserve">
+    <value>Быстрый запуск</value>
+  </data>
+  <data name="BtnFeedback" xml:space="preserve">
+    <value>Отправить отзыв</value>
+  </data>
+  <data name="BtnReload" xml:space="preserve">
+    <value>Перегрузить</value>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="BtnSettings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="Caption" xml:space="preserve">
+    <value>TBox</value>
+  </data>
+  <data name="ChangeLogTitle" xml:space="preserve">
+    <value>TBox был обновлён, последние изменения:</value>
+  </data>
+  <data name="CheckForUpdates" xml:space="preserve">
+    <value>Проверка обновлений...</value>
+  </data>
+  <data name="ClearHistory" xml:space="preserve">
+    <value>Очистить</value>
+  </data>
+  <data name="ConfigureUserAction" xml:space="preserve">
+    <value>Настроить пользовательское действие</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Создание</value>
+  </data>
+  <data name="CreatePlugins" xml:space="preserve">
+    <value>Создание плагинов..</value>
+  </data>
+  <data name="DayOfTheWeek" xml:space="preserve">
+    <value>День недели:</value>
+  </data>
+  <data name="DayTime" xml:space="preserve">
+    <value>Время:</value>
+  </data>
+  <data name="ErrorProcessingChangelog" xml:space="preserve">
+    <value>Ошибка в обработке списка изменений</value>
+  </data>
+  <data name="FastStart" xml:space="preserve">
+    <value>Быстрый запуск</value>
+  </data>
+  <data name="FeedbackCaption" xml:space="preserve">
+    <value>TBox - отзыв</value>
+  </data>
+  <data name="FeedbackMessage" xml:space="preserve">
+    <value>Напишите несколько слов о том, как можно улучшить TBox. Если вы хотите получить ответ,пожалуйста укажите свой емэйл.</value>
+  </data>
+  <data name="FeedbackProgress" xml:space="preserve">
+    <value>Отправка отзыва</value>
+  </data>
+  <data name="FoundNewVersionTemplate" xml:space="preserve">
+    <value>Найдена новая версия: {0}, текущая версия: {1}. Вы хотите обновить TBox?</value>
+  </data>
+  <data name="GlobalHotKeysAreEnabled" xml:space="preserve">
+    <value>Глобальные горячие клавиши включены</value>
+  </data>
+  <data name="GlobalSettings" xml:space="preserve">
+    <value>Общие настройки</value>
+  </data>
+  <data name="HideOnCancel" xml:space="preserve">
+    <value>Сворачивать при отмене</value>
+  </data>
+  <data name="HideOnSave" xml:space="preserve">
+    <value>Сворачивать при сохранении</value>
+  </data>
+  <data name="HotKeys" xml:space="preserve">
+    <value>Горячие клавиши</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Информация</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Язык</value>
+  </data>
+  <data name="LicenseInfo" xml:space="preserve">
+    <value>Лицензировано  под GPLv2 лицензией.</value>
+  </data>
+  <data name="LifeTimeInfo" xml:space="preserve">
+    <value>В разработке с 2010.</value>
+  </data>
+  <data name="Localization" xml:space="preserve">
+    <value>Локализация</value>
+  </data>
+  <data name="MaxItemsInHistory" xml:space="preserve">
+    <value>Макс. количество пунктов в истории</value>
+  </data>
+  <data name="MenuCheckUpdates" xml:space="preserve">
+    <value>Проверить обновления</value>
+  </data>
+  <data name="MenuExit" xml:space="preserve">
+    <value>Выход</value>
+  </data>
+  <data name="MenuFastStart" xml:space="preserve">
+    <value>Быстрый запуск...</value>
+  </data>
+  <data name="MenuSettings" xml:space="preserve">
+    <value>Настройки...</value>
+  </data>
+  <data name="MessageNoUpdatesFound" xml:space="preserve">
+    <value>Обновления не найдены</value>
+  </data>
+  <data name="NewVersionAvailable" xml:space="preserve">
+    <value>Появилась новая версия TBox!</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="PathToTheErrorsDirectory" xml:space="preserve">
+    <value>Путь к папке для отчётов об ошибках:</value>
+  </data>
+  <data name="PathToTheMirrorDirectory" xml:space="preserve">
+    <value>Путь к папке с обновлениями:</value>
+  </data>
+  <data name="Prepare" xml:space="preserve">
+    <value>Подготовка...</value>
+  </data>
+  <data name="ProgressApplyChanges" xml:space="preserve">
+    <value>Применяю настройки...</value>
+  </data>
+  <data name="ProgressExit" xml:space="preserve">
+    <value>Выход...</value>
+  </data>
+  <data name="ProgressFinish" xml:space="preserve">
+    <value>Завершение...</value>
+  </data>
+  <data name="ProgressInitialize" xml:space="preserve">
+    <value>Инициализация...</value>
+  </data>
+  <data name="ProgressLoadingPlugins" xml:space="preserve">
+    <value>Загружаю плагины...</value>
+  </data>
+  <data name="ProgressReloadPluginsSettings" xml:space="preserve">
+    <value>Перезагружаю настройки плагинов...</value>
+  </data>
+  <data name="RecentActions" xml:space="preserve">
+    <value>Последние действия</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Сохранение...</value>
+  </data>
+  <data name="Scheduler" xml:space="preserve">
+    <value>Планировщик</value>
+  </data>
+  <data name="Schelduler" xml:space="preserve">
+    <value>Планировщик</value>
+  </data>
+  <data name="ScheldulerIsEnabled" xml:space="preserve">
+    <value>Планировщик включен</value>
+  </data>
+  <data name="ScriptsPaths" xml:space="preserve">
+    <value>Пути к скриптам</value>
+  </data>
+  <data name="SelectMenuActions" xml:space="preserve">
+    <value>Выбрать действия меню</value>
+  </data>
+  <data name="SendErrorReports" xml:space="preserve">
+    <value>Отправлять отчёты об ошибках</value>
+  </data>
+  <data name="SettingsCaption" xml:space="preserve">
+    <value>Общие настройки</value>
+  </data>
+  <data name="SettingsDescription" xml:space="preserve">
+    <value>Здесь вы можете настроить общие настройки данного приложения</value>
+  </data>
+  <data name="ShortcutToAutorun" xml:space="preserve">
+    <value>Ярлык в автозапуск</value>
+  </data>
+  <data name="ShortcutToDesktop" xml:space="preserve">
+    <value>Ярлык на рабочий стол</value>
+  </data>
+  <data name="ShowChangelogOnUpdate" xml:space="preserve">
+    <value>Показывать список изменений</value>
+  </data>
+  <data name="ShowSettingsBySingleClickOnTrayIcon" xml:space="preserve">
+    <value>Настройки по одинарному клику по иконке</value>
+  </data>
+  <data name="StartHidden" xml:space="preserve">
+    <value>Запускать свёрнутым</value>
+  </data>
+  <data name="TabsEnabledPlugins" xml:space="preserve">
+    <value>Управление плагинами</value>
+  </data>
+  <data name="TeamWorkSettings" xml:space="preserve">
+    <value>Настройки командной работы</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Тема:</value>
+  </data>
+  <data name="ToolTipFeedback" xml:space="preserve">
+    <value>Помогите автору улучшить приложение</value>
+  </data>
+  <data name="ToolTipTemplate" xml:space="preserve">
+    <value>TBox. Загружено {0} плагин(ов).</value>
+  </data>
+  <data name="UpdateDisabledItems" xml:space="preserve">
+    <value>Обновление отключённых элементов...</value>
+  </data>
+  <data name="UpdateFromSharedFolder" xml:space="preserve">
+    <value>Обновляться из сетевой папки</value>
+  </data>
+  <data name="UpdateInterval" xml:space="preserve">
+    <value>Интервал обновления:</value>
+  </data>
+  <data name="Usability" xml:space="preserve">
+    <value>Удобство использования</value>
+  </data>
+  <data name="UseGPUForUIRender" xml:space="preserve">
+    <value>Использовать видеокарту для интерфейса</value>
+  </data>
+  <data name="UserActions" xml:space="preserve">
+    <value>Пользовательские действия</value>
+  </data>
+  <data name="UseTrayMenuWithIcons" xml:space="preserve">
+    <value>Меню в трее с картинками</value>
+  </data>
+  <data name="VersionTemplate" xml:space="preserve">
+    <value>Версия: {0}.{1}</value>
+  </data>
+  <data name="WebSite" xml:space="preserve">
+    <value>Домашняя страничка:</value>
+  </data>
+  <data name="Shortcuts" xml:space="preserve">
+    <value>Ярлыки</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Назад</value>
+  </data>
+  <data name="Database" xml:space="preserve">
+    <value>Плагины: базы данных</value>
+  </data>
+  <data name="DefaultMainViewDescription" xml:space="preserve">
+    <value>Выберете пункт для настройки и кликните на него</value>
+  </data>
+  <data name="Desktop" xml:space="preserve">
+    <value>Плагины: компьютер</value>
+  </data>
+  <data name="Development" xml:space="preserve">
+    <value>Плагины: разработка вообще</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Плагины: другие</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="Web" xml:space="preserve">
+    <value>Плагины: вэб</value>
+  </data>
+  <data name="BtnHelp" xml:space="preserve">
+    <value>Помощь</value>
+  </data>
+  <data name="FastStartDescription" xml:space="preserve">
+    <value>Отсюда вы можете запускать наиболее часто выполняемые команды или сконфигурированные пользовательские действия</value>
+  </data>
+  <data name="Blog" xml:space="preserve">
+    <value>Блог:</value>
+  </data>
+  <data name="ChangeLog" xml:space="preserve">
+    <value>Список изменений</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Конфигурация</value>
+  </data>
+  <data name="PortableMode" xml:space="preserve">
+    <value>Сохранять конфигурационные файлы в папке, где расположен TBox</value>
+  </data>
+  <data name="RestartNeeded" xml:space="preserve">
+    <value>Для применения изменений необходим перезапуск TBox</value>
+  </data>
+  <data name="Aliases" xml:space="preserve">
+    <value>Псевдонимы</value>
+  </data>
+  <data name="ConfigureAlias" xml:space="preserve">
+    <value>Настройка псевдонима</value>
+  </data>
+</root>
