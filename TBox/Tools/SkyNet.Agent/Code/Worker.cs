@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
+using System.Text.Json;
 using Mnk.Library.Common.Log;
-using ServiceStack.Text;
 using Mnk.Library.ScriptEngine.Core.Interfaces;
 using Mnk.TBox.Tools.SkyNet.Common;
 using ScriptEngine.Core.Params;
@@ -36,10 +36,7 @@ namespace Mnk.TBox.Tools.SkyNet.Agent.Code
             }
         }
 
-        public bool IsDone
-        {
-            get { return thread == null; }
-        }
+        public bool IsDone => thread == null;
 
         public void Cancel()
         {
@@ -70,13 +67,13 @@ namespace Mnk.TBox.Tools.SkyNet.Agent.Code
             try
             {
                 path = filesDownloader.DownloadAndUnpackFiles(task.ZipPackageId);
-                var script = compiler.Compile(task.Script, JsonSerializer.DeserializeFromString<IList<Parameter>>(task.ScriptParameters));
+                var script = compiler.Compile(task.Script, JsonSerializer.Deserialize<IList<Parameter>>(task.ScriptParameters));
                 task.Report = script.AgentExecute(path, task.Config, context);
             }
             catch (Exception ex)
             {
                 log.Write(ex, "Can't execute task: " + task.Id);
-                task.Report = "Agent failed: " +  Environment.MachineName + Environment.NewLine + ex.ToString();
+                task.Report = "Agent failed: " + Environment.MachineName + Environment.NewLine + ex;
             }
             finally
             {

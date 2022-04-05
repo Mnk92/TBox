@@ -1,5 +1,5 @@
 ﻿using System.IO;
-using ServiceStack.Text;
+using System.Text.Json;
 using Mnk.Library.ScriptEngine;
 using Mnk.Library.ScriptEngine.Core.Interfaces;
 using Mnk.TBox.Core.Contracts;
@@ -34,7 +34,7 @@ namespace Mnk.TBox.Plugins.SkyNet.Code
             {
                 Owner = config.Name,
                 Script = scriptContent,
-                ScriptParameters = JsonSerializer.SerializeToString(operation.Parameters),
+                ScriptParameters = JsonSerializer.Serialize(operation.Parameters),
                 ZipPackageId = PackData(script)
             };
             return new TaskInfo

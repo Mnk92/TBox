@@ -1,8 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using Ionic.Zip;
-using Ionic.Zlib;
+using System.IO.Compression;
 using Mnk.TBox.Tools.SkyNet.Common.Modules;
 using NUnit.Framework;
 
@@ -32,12 +31,7 @@ namespace Mnk.TBox.Tests.Tools.SkyNet.SkyNet.Common
             //Arrange
             var packer = new DataPacker();
             var expected = AppDomain.CurrentDomain.BaseDirectory;
-            using (var zf = new ZipFile())
-            {
-                zf.CompressionLevel = CompressionLevel.BestCompression;
-                zf.AddDirectory(expected);
-                zf.Save(zipPath);
-            }
+            ZipFile.CreateFromDirectory(expected, zipPath);
 
             //Act
             string actual;
@@ -52,7 +46,7 @@ namespace Mnk.TBox.Tests.Tools.SkyNet.SkyNet.Common
 
         private static long GetSize(string path)
         {
-            var size = new DirectoryInfo(path).EnumerateFiles().Sum(x=>x.Length);
+            var size = new DirectoryInfo(path).EnumerateFiles().Sum(x => x.Length);
             return size;
         }
     }

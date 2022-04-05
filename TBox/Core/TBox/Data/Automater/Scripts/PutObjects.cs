@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
-using Ionic.Zip;
+using System.IO.Compression;
 using Mnk.TBox.Core.PluginsShared.Automator;
 using Mnk.Library.ScriptEngine;
 using Mnk.Library.WpfControls.Dialogs;
@@ -66,24 +66,27 @@ namespace Solution.Scripts
 
         private void UnpackPackage(FileInfo package, IPathResolver pathResolver)
         {
-            using (var zf = ZipFile.Read(package.FullName))
+            using (var zipFile = new FileStream(package.FullName, FileMode.Open))
             {
-                foreach (var entry in zf.Where(entry => CanUnpack(entry.FileName)))
+                using (var archive = new ZipArchive(zipFile, ZipArchiveMode.Read))
                 {
-                    Save(entry, pathResolver);
+                    foreach (var entry in archive.Entries.Where(entry => CanUnpack(entry.FullName)))
+                    {
+                        Save(entry, pathResolver);
+                    }
                 }
             }
         }
 
-        private void Save(ZipEntry entry, IPathResolver pathResolver )
+        private void Save(ZipArchiveEntry entry, IPathResolver pathResolver )
         {
             foreach (var path in TargetPathes.Select(pathResolver.Resolve))
             {
-                var targetDir = Path.Combine(path, Path.GetFileNameWithoutExtension(entry.FileName));
+                var targetDir = Path.Combine(path, Path.GetFileNameWithoutExtension(entry.FullName));
                 if (!Directory.Exists(targetDir)) continue;
-                var targetPath = Path.Combine(targetDir, entry.FileName);
+                var targetPath = Path.Combine(targetDir, entry.FullName);
                 if (File.Exists(targetPath)) File.Delete(targetPath);
-                entry.Extract(targetDir);
+                entry.ExtractToFile(targetPath);
             }
         }
 

@@ -69,10 +69,6 @@
       <HintPath>..\..\..\Libs\Mnk.Library\Mnk.Library.ScriptEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\..\..\Libs\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
@@ -80,9 +76,15 @@
     <Reference Include="System.IO" />
     <Reference Include="System.Linq.Expressions" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Memory">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Runtime" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Text.Json">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />

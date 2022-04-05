@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Windows;
-using Ionic.Zip;
+using System.IO.Compression;
 using Mnk.TBox.Core.PluginsShared.Automator;
 using Mnk.Library.ScriptEngine;
 using Mnk.Library.WpfControls.Dialogs;
@@ -72,22 +72,25 @@ namespace Solution.Scripts
         private bool UnpackPackage(FileInfo package, IPathResolver pathResolver)
         {
             var count = 0;
-            using (var zf = ZipFile.Read(package.FullName))
+            using (var zipFile = new FileStream(package.FullName, FileMode.Open))
             {
-                foreach (var entry in zf)
+                using (var archive = new ZipArchive(zipFile, ZipArchiveMode.Read))
                 {
-                    var directory = Path.GetDirectoryName(entry.FileName);
-                    if (string.IsNullOrEmpty(directory)) continue;
-                    var alias = Aliases.FirstOrDefault(x => directory.StartsWith(x.Key));
-                    if (string.IsNullOrEmpty(alias.Key)) continue;
-                    ++count;
-                    Save(entry, alias.Value + entry.FileName.Substring(alias.Key.Length), pathResolver);
+                    foreach (var entry in archive.Entries)
+                    {
+                        var directory = Path.GetDirectoryName(entry.FullName);
+                        if (string.IsNullOrEmpty(directory)) continue;
+                        var alias = Aliases.FirstOrDefault(x => directory.StartsWith(x.Key));
+                        if (string.IsNullOrEmpty(alias.Key)) continue;
+                        ++count;
+                        Save(entry, alias.Value + entry.FullName.Substring(alias.Key.Length), pathResolver);
+                    }
                 }
             }
             return count > 0;
         }
 
-        private void Save(ZipEntry entry, string name, IPathResolver pathResolver)
+        private void Save(ZipArchiveEntry entry, string name, IPathResolver pathResolver)
         {
             foreach (var path in TargetPathes.Select(pathResolver.Resolve))
             {
@@ -96,7 +99,7 @@ namespace Solution.Scripts
                 if (!Directory.Exists(targetDir)) Directory.CreateDirectory(targetDir);
                 var targetPath = Path.GetFullPath(Path.Combine(targetDir, Path.GetFileName(name)));
                 if (File.Exists(targetPath)) File.Delete(targetPath);
-                entry.Extract(targetDir);
+                entry.ExtractToFile(targetPath);
             }
         }
     }

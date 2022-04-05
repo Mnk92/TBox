@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading;
-using ServiceStack.Text;
+using System.Text.Json;
 using Mnk.Library.ScriptEngine.Core.Interfaces;
 using Mnk.TBox.Tools.SkyNet.Common;
 using Mnk.TBox.Tools.SkyNet.Common.Modules;
@@ -29,7 +29,7 @@ namespace Mnk.TBox.Tools.SkyNet.Server.Code.Processing
 
         public void ProcessTask(ServerTask task, IList<ServerAgent> agents)
         {
-            var script = compiler.Compile(task.Script, JsonSerializer.DeserializeFromString<IList<Parameter>>(task.ScriptParameters));
+            var script = compiler.Compile(task.Script, JsonSerializer.Deserialize<IList<Parameter>>(task.ScriptParameters));
             var items = StartAgents(task, script, agents);
             if (!items.Any())
             {
@@ -61,17 +61,17 @@ namespace Mnk.TBox.Tools.SkyNet.Server.Code.Processing
             }
             finally
             {
-                if(Directory.Exists(path))Directory.Delete(path,true);
+                if (Directory.Exists(path)) Directory.Delete(path, true);
             }
         }
 
         private void WaitAgents(ServerTask task, IList<WorkerTask> items)
         {
-            while(true)
+            while (true)
             {
                 var tasks = items.AsParallel().Select(x => agentLogic.GetTask(x)).ToArray();
-                task.Progress = tasks.Sum(x => GetProgress(x))/tasks.Length;
-                if(tasks.All(x => x.IsDone || x.IsCanceled))return;
+                task.Progress = tasks.Sum(x => GetProgress(x)) / tasks.Length;
+                if (tasks.All(x => x.IsDone || x.IsCanceled)) return;
                 Thread.Sleep(3000);
             }
         }

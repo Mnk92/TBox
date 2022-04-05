@@ -2,8 +2,8 @@
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Text.Json;
 using System.Web;
-using ServiceStack.Text;
 
 namespace Mnk.TBox.Plugins.LocalizationTool.Code.Translate
 {
@@ -21,7 +21,7 @@ namespace Mnk.TBox.Plugins.LocalizationTool.Code.Translate
 
         private static string BuildUri(string text, string locFrom, string locTo)
         {
-            return 
+            return
                 string.Format("http://translate.google.com/translate_a/t?client=j&text={0}&sl={1}&oe=UTF-8&ie=UTF-8&tl={2}",
                     HttpUtility.UrlEncode(text), locFrom, locTo
                     );
@@ -40,7 +40,7 @@ namespace Mnk.TBox.Plugins.LocalizationTool.Code.Translate
         {
             using (var s = new MemoryStream(response))
             {
-                var sentences = JsonSerializer.DeserializeFromStream<Translation>(s).sentences;
+                var sentences = JsonSerializer.Deserialize<Translation>(s).sentences;
                 if (sentences == null || sentences.Count == 0) return string.Empty;
                 var sb = new StringBuilder();
                 foreach (var line in sentences)

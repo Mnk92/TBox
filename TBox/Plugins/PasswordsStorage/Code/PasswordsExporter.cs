@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.Json;
 using Microsoft.Win32;
 using Mnk.Library.WpfControls.Tools;
 using Mnk.TBox.Core.Contracts;
 using Mnk.TBox.Plugins.PasswordsStorage.Code.Settings;
-using ServiceStack.Text;
 
 namespace Mnk.TBox.Plugins.PasswordsStorage.Code
 {
@@ -39,7 +39,7 @@ namespace Mnk.TBox.Plugins.PasswordsStorage.Code
             Dictionary<string, List<LoginInfo>> profiles;
             using (var f = File.OpenRead(path))
             {
-                 profiles = JsonSerializer.DeserializeFromStream<Dictionary<string, List<LoginInfo>>>(f);
+                profiles = JsonSerializer.Deserialize<Dictionary<string, List<LoginInfo>>>(f);
             }
 
             var actual = cm.Config.Profiles;
@@ -55,7 +55,7 @@ namespace Mnk.TBox.Plugins.PasswordsStorage.Code
                     var activeLine = activeProfile.LoginInfos.FirstOrDefault(x => string.Equals(x.Key, line.Key));
                     if (activeLine == null)
                     {
-                        activeProfile.LoginInfos.Add(activeLine = new LoginInfo {Key = line.Key});
+                        activeProfile.LoginInfos.Add(activeLine = new LoginInfo { Key = line.Key });
                     }
                     activeLine.Login = line.Login;
                     activeLine.Comment = line.Comment;
@@ -85,7 +85,7 @@ namespace Mnk.TBox.Plugins.PasswordsStorage.Code
             }
             using (var f = File.OpenWrite(path))
             {
-                JsonSerializer.SerializeToStream(profiles, f);
+                JsonSerializer.Serialize(f, profiles);
             }
         }
 

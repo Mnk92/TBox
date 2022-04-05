@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using Ionic.Zip;
+using System.IO.Compression;
 using Mnk.Library.Common.Log;
 
 namespace Mnk.TBox.Tools.SkyNet.Common.Modules
@@ -18,15 +18,12 @@ namespace Mnk.TBox.Tools.SkyNet.Common.Modules
                 {
                     stream.CopyTo(fs);
                 }
-                using (var zs = new ZipFile(zipPath))
-                {
-                    zs.ExtractAll(folderPath);
-                }
+                ZipFile.ExtractToDirectory(zipPath, folderPath);
             }
             catch (Exception ex)
             {
                 log.Write(ex, "Can't unpack data");
-                if(Directory.Exists(folderPath))Directory.Delete(folderPath, true);
+                if (Directory.Exists(folderPath)) Directory.Delete(folderPath, true);
                 throw;
             }
             finally

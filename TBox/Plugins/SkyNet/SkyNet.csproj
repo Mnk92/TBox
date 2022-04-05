@@ -34,10 +34,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
-      <HintPath>..\..\..\Libs\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="LightInject, Version=6.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Libs\LightInject.6.4.1\lib\net46\LightInject.dll</HintPath>
       <Private>False</Private>
@@ -67,16 +63,20 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\..\..\Libs\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Linq.Expressions" />
+    <Reference Include="System.Memory">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Runtime" />
+    <Reference Include="System.Text.Json">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml" />

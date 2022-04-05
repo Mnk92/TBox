@@ -50,6 +50,7 @@
   <ItemGroup>
     <Reference Include="LightInject, Version=6.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\Libs\LightInject.6.4.1\lib\net46\LightInject.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Mnk.Library.Common">
       <HintPath>..\..\..\Libs\Mnk.Library\Mnk.Library.Common.dll</HintPath>
@@ -59,18 +60,20 @@
       <HintPath>..\..\..\Libs\Mnk.Library\Mnk.Library.ScriptEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="ServiceStack.Text">
-      <HintPath>..\..\..\Libs\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO" />
     <Reference Include="System.Linq.Expressions" />
+    <Reference Include="System.Memory">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Runtime" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Text.Json">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>

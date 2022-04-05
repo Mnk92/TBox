@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="LightInject, Version=6.4.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\Libs\LightInject.6.4.1\lib\net46\LightInject.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Mnk.Library.Common">
       <HintPath>..\..\Libs\Mnk.Library\Mnk.Library.Common.dll</HintPath>

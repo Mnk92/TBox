@@ -86,6 +86,7 @@
       <Link>Tools\build_project.cmd</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Resources\Settings.ico" />
     <None Include="Resources\Tip.ico" />
@@ -258,13 +259,6 @@
       <SubType>Code</SubType>
     </Compile>
     <None Include="License.rtf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="TBox32.exe.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="TBox.exe.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Themes\Default.xaml">
