@@ -1,0 +1,306 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\bin\$(Configuration)\Localization\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="PluginsShared\PluginsSharedLang.ru.Designer.cs">
+      <DependentUpon>PluginsSharedLang.ru.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="PluginsShared\PluginsSharedLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PluginsSharedLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\AppConfigManager\AppConfigManagerLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppConfigManagerLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\Automator\AutomatorLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AutomatorLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\AvailabilityChecker\AvailabilityCheckerLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AvailabilityCheckerLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\BookletPagesGenerator\BookletPagesGeneratorLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BookletPagesGeneratorLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\DevServerRunner\DevServerRunnerLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DevServerRunnerLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\DirectoryProcessor\DirectoryProcessorLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DirectoryProcessorLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\Encoder\EncoderLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EncoderLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\FileWatcher\FileWatcherLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FileWatcherLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\HtmlPad\HtmlPadLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HtmlPadLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\LeaksInterceptor\LeaksInterceptorLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LeaksInterceptorLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\LocalizationTool\LocalizationToolLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizationToolLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\Market\MarketLang.Designer.cs">
+      <DependentUpon>MarketLang.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Plugins\Notes\NotesLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NotesLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\NUnitRunner\NUnitRunnerLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NUnitRunnerLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\PasswordsStorage\PasswordsStorageLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PasswordsStorageLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\ProjectMan\ProjectManLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectManLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\RegExpTester\RegExpTesterLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegExpTesterLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\Requestor\RequestorLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RequestorLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\RequestsWatcher\RequestsWatcherLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RequestsWatcherLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\Searcher\SearcherLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SearcherLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\ServicesCommander\ServicesCommanderLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ServicesCommanderLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\SkyNet\SkyNetLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkyNetLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\SourcesUniter\SourcesUniterLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SourcesUniterLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\SqlRunner\SqlRunnerLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SqlRunnerLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\SqlWatcher\SqlWatcherLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SqlWatcherLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\TeamManager\TeamManagerLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeamManagerLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\Templates\TemplatesLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TemplatesLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\TextGenerator\TextGeneratorLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TextGeneratorLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Plugins\XsltTester\XsltTesterLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>XsltTesterLang.resx</DependentUpon>
+    </Compile>
+    <Compile Update="TBox\TBoxLang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TBoxLang.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="PluginsShared\PluginsSharedLang.ru.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PluginsSharedLang.ru.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="PluginsShared\PluginsSharedLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PluginsSharedLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\AppConfigManager\AppConfigManagerLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppConfigManagerLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\Automator\AutomatorLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AutomatorLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\AvailabilityChecker\AvailabilityCheckerLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AvailabilityCheckerLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\BookletPagesGenerator\BookletPagesGeneratorLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>BookletPagesGeneratorLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\DevServerRunner\DevServerRunnerLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DevServerRunnerLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\DirectoryProcessor\DirectoryProcessorLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>DirectoryProcessorLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\Encoder\EncoderLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EncoderLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\FileWatcher\FileWatcherLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>FileWatcherLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\HtmlPad\HtmlPadLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HtmlPadLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\LeaksInterceptor\LeaksInterceptorLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LeaksInterceptorLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\LocalizationTool\LocalizationToolLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizationToolLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\Market\MarketLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>MarketLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\Notes\NotesLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NotesLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\NUnitRunner\NUnitRunnerLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>NUnitRunnerLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\PasswordsStorage\PasswordsStorageLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PasswordsStorageLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\ProjectMan\ProjectManLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProjectManLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\RegExpTester\RegExpTesterLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegExpTesterLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\Requestor\RequestorLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RequestorLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\RequestsWatcher\RequestsWatcherLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RequestsWatcherLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\Searcher\SearcherLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SearcherLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\ServicesCommander\ServicesCommanderLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ServicesCommanderLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\SkyNet\SkyNetLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkyNetLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\SourcesUniter\SourcesUniterLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SourcesUniterLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\SqlRunner\SqlRunnerLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SqlRunnerLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\SqlWatcher\SqlWatcherLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SqlWatcherLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\TeamManager\TeamManagerLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TeamManagerLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\Templates\TemplatesLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TemplatesLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\TextGenerator\TextGeneratorLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TextGeneratorLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Plugins\XsltTester\XsltTesterLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>XsltTesterLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TBox\TBoxLang.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>TBoxLang.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.0" />
+    <PackageReference Include="Mnk.Library.Localization" Version="2.0.0" />
+  </ItemGroup>
+</Project>

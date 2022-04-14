@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <OutputType>Library</OutputType>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <UseWPF>true</UseWPF>
+        <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <OutputPath>..\..\bin\$(Configuration)\Libraries\</OutputPath>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Microsoft.Exchange.WebServices, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\..\..\Libs\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.Exchange.WebServices.Auth, Version=15.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+            <HintPath>..\..\..\Libs\Microsoft.Exchange.WebServices.2.2\lib\40\Microsoft.Exchange.WebServices.Auth.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" IncludeAssets="compile" PrivateAssets="all" />
+        <ProjectReference Include="..\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Mnk.Library.Common" Version="2.0.0" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.0" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.0" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="Mnk.Library.WpfSyntaxHighlighter" Version="2.0.0" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="System.ServiceProcess.ServiceController" Version="6.0.0" />
+        <PackageReference Include="ZetaLongPaths.NetStandard" Version="1.0.0.35" IncludeAssets="compile" PrivateAssets="all" />
+    </ItemGroup>
+</Project>

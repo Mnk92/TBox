@@ -1,0 +1,151 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Mnk.TBox.Tools.SkyNet.Contracts";
+
+message IdMessage
+{
+	string Id = 1;
+}
+
+message EndpointMessage
+{
+	string Endpoint = 1;
+}
+
+message ReportMessage
+{
+	string Report = 1;
+}
+
+service ISkyNetAgentService
+{
+	rpc AddAgentTask(AgentTask) returns (IdMessage);
+	rpc GetAgentTask(IdMessage) returns (AgentTask);
+	rpc GetCurrentAgentTask(google.protobuf.Empty) returns (AgentTask);
+	rpc CancelTask(IdMessage) returns(google.protobuf.Empty);
+	rpc TerminateAgentTask(IdMessage) returns(google.protobuf.Empty);
+	rpc DeleteAgentTask(IdMessage) returns(ReportMessage);
+	rpc PingIsAgentAlive(google.protobuf.Empty) returns (google.protobuf.Empty);
+}
+
+message StreamMessage
+{
+	bytes Data = 1;
+}
+
+service ISkyNetFileService
+{
+	rpc Upload(stream StreamMessage) returns (IdMessage);
+	rpc Download(IdMessage) returns (stream StreamMessage);
+	rpc Delete(IdMessage) returns (google.protobuf.Empty);
+}
+
+message ServerAgentsMessage
+{
+	repeated ServerAgent ServerAgents = 1;
+}
+
+service ISkyNetServerAgentsService
+{
+	rpc GetAgents(google.protobuf.Empty) returns (ServerAgentsMessage);
+	rpc ConnectAgent(ServerAgent) returns (google.protobuf.Empty);
+	rpc DisconnectAgent(EndpointMessage) returns (google.protobuf.Empty);
+	rpc PingIsServerAgentsAlive(google.protobuf.Empty) returns (google.protobuf.Empty);
+}
+
+message ServerTasksMessage
+{
+	repeated ServerTask ServerTasks = 1;
+}
+
+service ISkyNetServerTasksService
+{
+	rpc AddServerTask(ServerTask) returns (IdMessage);
+	rpc GetServerTasks(google.protobuf.Empty) returns (ServerTasksMessage);
+	rpc CancelServerTask(IdMessage) returns (google.protobuf.Empty);
+	rpc TerminateServerTask(IdMessage) returns (google.protobuf.Empty);
+	rpc GetServerTask(IdMessage) returns (ServerTask);
+	rpc DeleteServerTask(IdMessage) returns (ReportMessage);
+}
+
+message ConfigMessage
+{
+	string Config = 1;
+}
+
+service IConfigProvider
+{
+	rpc ReceiveConfig(google.protobuf.Empty) returns (ConfigMessage);
+	rpc UpdateConfig(ConfigMessage) returns (google.protobuf.Empty);
+}
+
+message AgentConfig
+{
+	string Name = 1;
+	string AgentEndpoint = 2;
+	string ServerEndpoint = 3;
+	int32 TotalCores = 4;
+}
+
+message AgentTask
+{
+	string Id = 1;
+	string Script = 2;
+	string Config = 3;
+	string ZipPackageId = 4;
+	int32 Progress = 5;
+	bool IsDone = 6;
+	string Report = 7;
+	bool IsCanceled = 8;
+	string ScriptParameters = 9;
+}
+
+message ServerAgent
+{
+	string Endpoint = 1;
+	int32 TotalCores = 2;
+	enum AgentState
+	{
+		Idle = 0;
+		InProgress = 1;
+		Died = 2;
+	}
+	AgentState State = 3;
+}
+
+message ServerConfig
+{
+	int32 MaximumTaskExecutionTime = 1;
+	string ServerEndpoint = 2;
+}
+
+message ServerTask
+{
+	string Id = 1;
+	string Script = 2;
+	string Owner = 3;
+	string ScriptParameters = 4;
+	string ZipPackageId = 5;
+	string Report = 6;
+	int32 Progress = 7;
+	bool IsDone = 8;
+	enum TaskState
+	{
+		Idle = 0;
+		InProgress = 1;
+		Done = 2;
+	}
+	TaskState State = 9;
+	google.protobuf.Timestamp CreatedTime = 10;
+}
+
+message SkyAgentWork
+{
+	ServerAgent Agent = 1;
+	string Config = 2;
+	string Report = 3;
+	bool IsFailed = 4;
+}

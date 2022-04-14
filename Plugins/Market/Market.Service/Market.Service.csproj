@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>Mnk.TBox.Plugins.Market.Service</RootNamespace>
+        <AssemblyName>Mnk.TBox.Plugins.Market.Service</AssemblyName>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+        <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <OutputPath>..\..\..\bin\$(Configuration)\Tools\Market</OutputPath>
+    </PropertyGroup>
+    <ItemGroup>
+      <Content Include="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Market.Contracts\Market.Contracts.csproj" />
+        <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="16.30.0"/>
+        <PackageReference Include="DotNetCore.Objects" Version="16.30.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.4" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.4"/>
+        <PackageReference Include="Grpc.AspNetCore" Version="2.44.0" />
+        <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" />
+        <PackageReference Include="Mnk.Library.Common" Version="2.0.0" />
+    </ItemGroup>
+</Project>

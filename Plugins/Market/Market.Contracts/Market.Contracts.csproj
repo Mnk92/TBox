@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Mnk.TBox.Plugins.Market.Contracts</RootNamespace>
+    <AssemblyName>Mnk.TBox.Plugins.Market.Contracts</AssemblyName>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\..\..\bin\$(Configuration)\Libraries\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.44.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Proto\market.proto" GrpcServices="Both" Link="Protos\market.proto" />
+  </ItemGroup>
+</Project>

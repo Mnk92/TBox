@@ -1,0 +1,165 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <ApplicationIcon>Resources\Icon.ico</ApplicationIcon>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWPF>true</UseWPF>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\..\bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Mnk.TBox.Core.Application.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Mnk.TBox.Core.Application</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Back.ico" />
+    <Resource Include="Resources\Help.ico" />
+    <None Include="..\..\tools\build_build.cmd">
+      <Link>Tools\build_build.cmd</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\..\tools\build_project.cmd">
+      <Link>Tools\build_project.cmd</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Resources\Feedback.ico" />
+    <Resource Include="Resources\Update.ico" />
+    <Resource Include="Resources\Save.ico" />
+    <Resource Include="Resources\Minimize.ico" />
+    <Resource Include="Resources\Refresh.ico" />
+    <None Update="Data\TeamManager\Styles\dark.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\TeamManager\Styles\default.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\Automater\Scripts\AddTracing.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="..\..\tools\RunAsx86.exe">
+      <Link>Tools\RunAsx86.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\..\tools\sudo.exe">
+      <Link>Tools\sudo.exe</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\ClearFolders.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\EnableFeatures.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\OptimizeSolution.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\params.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\PutObjects.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\PutResources.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\RunDevServers.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\SelectDatabases.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\StopDevServers.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Runner.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Templates\Sample\{#test#}.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Scripts\ReplaceStrings.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Data\TeamManager\DataProviders\SubversionScript.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\TeamManager\DataProviders\TargetProcessScript.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\TeamManager\Validators\Default.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\SkyNet\NUnitTests.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Data\SkyNet\Factorial.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Data\Automater\Scripts\ExecuteCommands.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Update="License.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" />
+    <ProjectReference Include="..\Contracts\Mnk.TBox.Core.Contracts.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="changelog.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Solution.csproj">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Automater\Solution.sln">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LightInject" Version="6.4.1" />
+    <PackageReference Include="Mnk.Library.CodePlex" Version="2.0.0" />
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.0" />
+    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.0" />
+    <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.0" />
+    <PackageReference Include="Mnk.ParallelNUnit" Version="2.0.0" />
+    <PackageReference Include="ConsoleUnitTestsRunner" Version="2.0.0" />
+    <PackageReference Include="NUnitAgent" Version="2.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Data\Automater\Runner.cs" />
+    <Compile Remove="Data\Automater\Scripts\AddTracing.cs" />
+    <Compile Remove="Data\Automater\Scripts\ClearFolders.cs" />
+    <Compile Remove="Data\Automater\Scripts\EnableFeatures.cs" />
+    <Compile Remove="Data\Automater\Scripts\ExecuteCommands.cs" />
+    <Compile Remove="Data\Automater\Scripts\OptimizeSolution.cs" />
+    <Compile Remove="Data\Automater\Scripts\params.cs" />
+    <Compile Remove="Data\Automater\Scripts\PutObjects.cs" />
+    <Compile Remove="Data\Automater\Scripts\PutResources.cs" />
+    <Compile Remove="Data\Automater\Scripts\ReplaceStrings.cs" />
+    <Compile Remove="Data\Automater\Scripts\RunDevServers.cs" />
+    <Compile Remove="Data\Automater\Scripts\SelectDatabases.cs" />
+    <Compile Remove="Data\Automater\Scripts\StopDevServers.cs" />
+    <Compile Remove="Data\SkyNet\Factorial.cs" />
+    <Compile Remove="Data\SkyNet\NUnitTests.cs" />
+    <Compile Remove="Data\TeamManager\DataProviders\SubversionScript.cs" />
+    <Compile Remove="Data\TeamManager\DataProviders\TargetProcessScript.cs" />
+    <Compile Remove="Data\TeamManager\Validators\Default.cs" />
+    <Compile Remove="Data\Templates\Sample\{#test#}.cs" />
+    <Page Remove="Themes\Default.xaml" />
+  </ItemGroup>
+</Project>

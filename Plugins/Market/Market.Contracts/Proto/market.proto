@@ -1,0 +1,105 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "Mnk.TBox.Plugins.Market.Contracts";
+
+service MarketService
+{
+	rpc GetPluginsList(PluginSearch) returns (PluginSearchResult);
+	rpc GetPluginsListCount(PluginSearch) returns (CountResult);
+	rpc DownloadPlugin(DownloadPluginMessage) returns (stream ResultStream);
+	rpc UploadPlugin(stream UploadPluginStream) returns (BoolResult);
+	rpc UpgradePlugin(stream UploadPluginStream) returns (BoolResult);
+	rpc DeletePlugin(Plugin) returns (BoolResult);
+	rpc ExistPlugin(Plugin) returns (BoolResult);
+	rpc GetBugList(BugSearch) returns (BugSearchResult);
+	rpc GetBugListCount(BugSearch) returns (CountResult);
+	rpc SendBug(Bug) returns(google.protobuf.Empty);
+	rpc GetAuthorList(google.protobuf.Empty) returns (StringResult);
+	rpc GetTypeList(google.protobuf.Empty) returns (StringResult);
+}
+
+message Bug
+{
+	uint64 BugId = 1;
+	uint64 PluginId = 2;
+	string Description = 3;
+	google.protobuf.Timestamp Date = 4;
+}
+
+message Plugin
+{
+	uint64 PluginId = 1;
+	string Name = 2;
+	string Description = 3;
+	string Type = 4;
+	string Author = 5;
+	google.protobuf.Timestamp Date = 6;
+	uint64 Size = 7;
+	uint64 Downloads = 8;
+	uint64 Uploads = 9;
+	bool IsPlugin = 10;
+}
+
+message PluginSearch
+{
+	string Type = 1;
+	string Author = 2;
+	uint64 Offset = 3;
+	uint64 Count = 4;
+	bool OnlyPlugins = 5;
+}
+
+message PluginSearchResult
+{
+	repeated Plugin Items = 1;
+}
+
+message BugSearch
+{
+	uint64 PluginId = 1;
+	Bug Filter = 2;
+	uint64 Offset = 3;
+	uint64 Count = 4;
+}
+
+message BugSearchResult
+{
+	repeated Bug Items = 1;
+}
+
+message BoolResult
+{
+	bool Success = 1; 
+}
+
+message CountResult
+{
+	uint64 Count = 1;
+}
+
+message StringResult
+{
+	repeated string Items = 1;
+}
+
+message ResultStream
+{
+	bytes Data = 1;
+	map<string,int32> Descriptions = 2;
+}
+
+message UploadPluginStream
+{
+	Plugin Plugin = 1;
+	bytes Data = 2;
+	map<string,int32> Descriptions = 3;
+	int32 Length = 4;
+}
+
+message DownloadPluginMessage
+{
+	uint64 PluginId = 1;
+}
