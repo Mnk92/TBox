@@ -1,11 +1,10 @@
 ﻿using System.IO;
-using Mnk.Library.CodePlex;
+using Mnk.Library.AutoUpdateAndFeedback;
 using Mnk.Library.Common.AutoUpdate;
 using Mnk.Library.Common.Log;
 using Mnk.Library.WpfControls;
 using Mnk.TBox.Core.Contracts;
 using LightInject;
-using Mnk.TBox.Core.Application.Code.AutoUpdate;
 using Mnk.TBox.Core.Application.Code.Configs;
 using Mnk.TBox.Core.Application.Code.FastStart;
 using Mnk.TBox.Core.Application.Code.Managers;
@@ -51,8 +50,8 @@ namespace Mnk.TBox.Core.Application.Code
             container.Register<WarmingUpManager>(new PerContainerLifetime());
             container.Register<PluginsContextShared>(new PerContainerLifetime());
 
-            container.RegisterInstance<IApplicationUpdater>(new CodePlexApplicationUpdater("tbox"));
-            container.Register<IAutoUpdater, ApplicationUpdater>(new PerContainerLifetime());
+            container.RegisterInstance<IApplicationUpdater>(new Mnk.Library.AutoUpdateAndFeedback.ApplicationUpdater("tbox"));
+            container.Register<IAutoUpdater, AutoUpdate.ApplicationUpdater>(new PerContainerLifetime());
             container.Register<IThemesManager, ThemesManager>(new PerContainerLifetime());
             container.RegisterInstance<IFeedbackSender>(new FeedbackSender(TBoxLang.AppName, "http://mnk92.cloudapp.net:61234"));
             container.RegisterInstance<ILogsSender>(new LogsSender(ErrorsLogsPath, container.GetInstance<IFeedbackSender>()));
@@ -60,6 +59,6 @@ namespace Mnk.TBox.Core.Application.Code
             return container;
         }
 
-        public static IServiceContainer Container { get { return container; } }
+        public static IServiceContainer Container => container;
     }
 }

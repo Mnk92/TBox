@@ -1,5 +1,5 @@
 ﻿using System;
-using Mnk.Library.CodePlex;
+using Mnk.Library.AutoUpdateAndFeedback;
 using Mnk.Library.Common.AutoUpdate;
 using Mnk.Library.Common.Log;
 using Mnk.TBox.Core.Contracts;
@@ -38,14 +38,13 @@ namespace Mnk.TBox.Core.Application.Code.AutoUpdate
                 return false;
             }
             cm.Config.Update.Last = DateTime.Now;
-            System.Windows.Application.Current.Dispatcher.Invoke(new Action(DoExit));
+            System.Windows.Application.Current.Dispatcher.Invoke(DoExit);
             return true;
         }
 
         private static void DoExit()
         {
-            var w = System.Windows.Application.Current.MainWindow as MainWindow;
-            if (w != null)
+            if (System.Windows.Application.Current.MainWindow is MainWindow w)
             {
                 w.MenuClose();
             }

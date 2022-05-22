@@ -16,7 +16,7 @@
     <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.44.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
     <PackageReference Include="Mnk.Library.Common" Version="2.0.0" />
     <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.0" />
   </ItemGroup>

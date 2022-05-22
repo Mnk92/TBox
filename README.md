@@ -1,3 +1,6 @@
+[![GitHub license](https://img.shields.io/github/license/Mnk92/tbox?cacheSeconds=3600&color=informational&label=License)](./LICENSE.md)
+[![Build](https://github.com/Mnk92/tbox/actions/workflows/build.yml/badge.svg?cacheSeconds=3600)](https://github.com/Mnk92/tbox/actions?query=workflow%3A%22tbox+build%22+branch%3Amaster)
+
 This project have started as a c# "hello world application" years ago. But now it is powerful tool that help me to work much faster. I will be glad if it will help anybody else.
 
 I have worked mostly with c++ and WinApi. As for me, I think that dotnet applications works very slow and uses to much memory. But optimization is interesting for me. I have decided to create one application with a lot of plugins. This can help reduce memory usage.

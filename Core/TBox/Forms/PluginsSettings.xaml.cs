@@ -6,7 +6,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Interop;
 using System.Windows.Media;
-using Mnk.Library.CodePlex;
+using Mnk.Library.AutoUpdateAndFeedback;
 using Mnk.Library.Common.OS;
 using Mnk.Library.Common.Tools;
 using Mnk.Library.Common.UI.ModelsContainers;
@@ -156,7 +156,7 @@ namespace Mnk.TBox.Core.Application.Forms
 
         private void AliasesCheckChanged(object sender, RoutedEventArgs e)
         {
-            Aliases.OnCheckChangedEvent(sender,e);
+            Aliases.OnCheckChangedEvent(sender, e);
         }
     }
 }

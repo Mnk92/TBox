@@ -132,7 +132,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LightInject" Version="6.4.1" />
-    <PackageReference Include="Mnk.Library.CodePlex" Version="2.0.0" />
+    <PackageReference Include="Mnk.Library.AutoUpdateAndFeedback" Version="2.0.0" />
     <PackageReference Include="Mnk.Library.Common" Version="2.0.0" />
     <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.0" />
     <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.0" />

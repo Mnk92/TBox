@@ -12,9 +12,9 @@
     <OutputPath>..\..\bin\$(Configuration)\Libraries\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.44.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
   </ItemGroup>
   <ItemGroup>
-    <Protobuf Include="Proto\contracts.proto" GrpcServices="Both" Link="Proto\contracts.proto"/>
+    <Protobuf Include="Proto\contracts.proto" GrpcServices="Both" Link="Proto\contracts.proto" />
   </ItemGroup>
 </Project>

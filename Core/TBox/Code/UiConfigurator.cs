@@ -5,7 +5,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using Mnk.Library.CodePlex;
+using Mnk.Library.AutoUpdateAndFeedback;
 using Mnk.Library.Common.Log;
 using Mnk.Library.Common.Tools;
 using Mnk.Library.WpfControls;

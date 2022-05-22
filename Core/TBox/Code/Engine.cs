@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using Mnk.Library.CodePlex;
+using Mnk.Library.AutoUpdateAndFeedback;
 using Mnk.Library.Common.Log;
 using Mnk.Library.Common.Plugins;
 using Mnk.Library.WpfControls;

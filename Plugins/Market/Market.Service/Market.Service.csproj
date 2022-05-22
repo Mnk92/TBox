@@ -17,11 +17,14 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Market.Contracts\Market.Contracts.csproj" />
-        <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="16.30.0"/>
-        <PackageReference Include="DotNetCore.Objects" Version="16.30.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.4" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.4"/>
-        <PackageReference Include="Grpc.AspNetCore" Version="2.44.0" />
+        <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="16.35.0" />
+        <PackageReference Include="DotNetCore.Objects" Version="16.35.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.5" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
         <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" />
         <PackageReference Include="Mnk.Library.Common" Version="2.0.0" />
     </ItemGroup>
