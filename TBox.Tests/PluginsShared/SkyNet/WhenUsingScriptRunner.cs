@@ -1,25 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using Mnk.Library.ScriptEngine.Core;
 using Mnk.TBox.Tests.Common;
 using Mnk.TBox.Tools.SkyNet.Common;
 using NUnit.Framework;
 using ScriptEngine.Core.Params;
 
-namespace Mnk.TBox.Tests.PlugingsShared.SkyNet
+namespace Mnk.TBox.Tests.PluginsShared.SkyNet
 {
     [TestFixture]
     [Category("Integration")]
-    class When_using_script_runner : ScriptsFixture
+    class WhenUsingScriptRunner : ScriptsFixture
     {
-        public static string[] Files
-        {
-            get { return Directory.GetFiles("../../../bin/"+Shared.CompileMode+"/Data/SkyNet/", "*.cs", SearchOption.TopDirectoryOnly); }
-        }
+        public static string[] Files => Directory.GetFiles("../../../bin/" + Shared.CompileMode + "/Data/SkyNet/", "*.cs", SearchOption.TopDirectoryOnly);
 
         [Test]
-        public void Should_get_packages_for_all_exist_scripts([ValueSource("Files")] string path)
+        public void Should_get_packages_for_all_exist_scripts([ValueSource(nameof(Files))] string path)
         {
             //Arrange
             var sc = new ScriptCompiler<ISkyScript>();
@@ -40,7 +35,7 @@ namespace Mnk.TBox.Tests.PlugingsShared.SkyNet
         }
 
         [Test]
-        public void Should_compile_all_exist_scripts([ValueSource("Files")] string path)
+        public void Should_compile_all_exist_scripts([ValueSource(nameof(Files))] string path)
         {
             //Arrange
             var sc = new ScriptCompiler<ISkyScript>();

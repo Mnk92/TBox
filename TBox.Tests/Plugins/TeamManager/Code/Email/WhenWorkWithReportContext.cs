@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Mnk.Library.Common.Communications;
+﻿using Mnk.Library.Common.Communications;
 using Mnk.Library.Common.UI.ModelsContainers;
 using Mnk.TBox.Core.PluginsShared.ReportsGenerator;
 using Mnk.TBox.Plugins.TeamManager.Code;
@@ -14,7 +10,7 @@ using NUnit.Framework;
 namespace Mnk.TBox.Tests.Plugins.TeamManager.Code.Email
 {
     [TestFixture]
-    class When_work_with_report_context
+    class WhenWorkWithReportContext
     {
         private Profile profile;
         private Func<IList<ReportPerson>, string> reportBuilder;
@@ -26,7 +22,7 @@ namespace Mnk.TBox.Tests.Plugins.TeamManager.Code.Email
         public void SetUp()
         {
             profile = new Profile();
-            reportBuilder = i=>"report " + i.Count;
+            reportBuilder = i => "report " + i.Count;
             fullReport = new FullReport();
             allPersons = new List<ReportPerson>();
             context = new ReportContext(fullReport, allPersons, profile, reportBuilder);
@@ -50,7 +46,7 @@ namespace Mnk.TBox.Tests.Plugins.TeamManager.Code.Email
         public void Should_create_smtp_email_sender()
         {
             //Arrange
-            profile.Email = new TBox.Plugins.TeamManager.Code.Settings.Email{IsSmtp = true};
+            profile.Email = new TBox.Plugins.TeamManager.Code.Settings.Email { IsSmtp = true };
             context = new ReportContext(fullReport, allPersons, profile, reportBuilder);
 
             // Assert
@@ -72,7 +68,7 @@ namespace Mnk.TBox.Tests.Plugins.TeamManager.Code.Email
         public void Should_build_report()
         {
             //Assert
-            Assert.AreEqual("report 1", context.BuildReport(new []{new ReportPerson()}));
+            Assert.AreEqual("report 1", context.BuildReport(new[] { new ReportPerson() }));
         }
 
         public static IEnumerable<Person> Persons = new[]
@@ -90,7 +86,7 @@ namespace Mnk.TBox.Tests.Plugins.TeamManager.Code.Email
             profile.Persons = new CheckableDataCollection<Person>(Persons);
 
             //Assert
-            CollectionAssert.AreEqual(new[]{"Personal", "Mix"}, context.GetPersons(TimeReportType.Personal).Select(x=>x.Key).ToArray());
+            CollectionAssert.AreEqual(new[] { "Personal", "Mix" }, context.GetPersons(TimeReportType.Personal).Select(x => x.Key).ToArray());
         }
 
         [Test]

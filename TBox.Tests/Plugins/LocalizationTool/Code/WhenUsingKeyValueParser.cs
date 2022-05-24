@@ -1,11 +1,10 @@
-﻿using System;
-using Mnk.TBox.Plugins.LocalizationTool.Code.Parsers;
+﻿using Mnk.TBox.Plugins.LocalizationTool.Code.Parsers;
 using NUnit.Framework;
 
 namespace Mnk.TBox.Tests.Plugins.LocalizationTool.Code
 {
     [TestFixture]
-    class When_using_key_value_parser
+    class WhenUsingKeyValueParser
     {
         private static readonly object[] TestData =
                                         {
@@ -35,7 +34,7 @@ namespace Mnk.TBox.Tests.Plugins.LocalizationTool.Code
         }
 
         [Test]
-        [TestCaseSource("TestData")]
+        [TestCaseSource(nameof(TestData))]
         public void Should_parse_template_and_save_valid_data(string template, string expected)
         {
             //Arrange
@@ -63,7 +62,7 @@ namespace Mnk.TBox.Tests.Plugins.LocalizationTool.Code
         }
 
         [Test]
-        [TestCaseSource("TestData")]
+        [TestCaseSource(nameof(TestData))]
         public void Should_parse_template_and_load_valid_data(string template, string text)
         {
             //Arrange

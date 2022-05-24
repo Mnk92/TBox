@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace Mnk.TBox.Tests.Plugins.SkyNet
 {
     [TestFixture]
-    class When_using_services_registrator
+    class WhenUsingServicesRegistrar
     {
         private IServiceContainer container;
 

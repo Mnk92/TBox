@@ -1,5 +1,4 @@
-﻿using System;
-using Google.Protobuf.WellKnownTypes;
+﻿using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Mnk.TBox.Tools.SkyNet.Contracts;
 using Mnk.TBox.Tools.SkyNet.Server.Code.Interfaces;
@@ -96,7 +95,7 @@ namespace Mnk.TBox.Tests.Tools.SkyNet.SkyNet.Server
             var actual = agentLogic.GetTask(wt);
 
             //Assert
-            Assert.AreEqual(agentTask, actual);
+            Assert.AreEqual(agentTask, actual.Result);
         }
 
         [Test]

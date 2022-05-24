@@ -1,6 +1,4 @@
-﻿using System;
-using System.Net;
-using Mnk.TBox.Tools.SkyNet.Agent;
+﻿using Mnk.TBox.Tools.SkyNet.Agent;
 using Mnk.TBox.Tools.SkyNet.Agent.Code;
 using Mnk.TBox.Tools.SkyNet.Contracts;
 using Moq;
@@ -122,7 +120,7 @@ namespace Mnk.TBox.Tests.Tools.SkyNet.SkyNet.Agent
             var report = logic.DeleteAgentTask(new IdMessage { Id = "abc" }, null).Result;
 
             //Assert
-            Assert.AreEqual(string.Empty, report);
+            Assert.IsEmpty(report.Report);
         }
 
         [Test]
@@ -137,7 +135,7 @@ namespace Mnk.TBox.Tests.Tools.SkyNet.SkyNet.Agent
             var report = logic.DeleteAgentTask(new IdMessage { Id = "abc" }, null).Result;
 
             //Assert
-            Assert.AreEqual(string.Empty, report);
+            Assert.IsEmpty(report.Report);
         }
 
         [Test]
@@ -153,7 +151,7 @@ namespace Mnk.TBox.Tests.Tools.SkyNet.SkyNet.Agent
             var report = logic.DeleteAgentTask(new IdMessage { Id = task.Id }, null).Result;
 
             //Assert
-            Assert.AreEqual(string.Empty, report);
+            Assert.IsEmpty(report.Report);
         }
 
         [Test]
@@ -169,7 +167,7 @@ namespace Mnk.TBox.Tests.Tools.SkyNet.SkyNet.Agent
             var report = logic.DeleteAgentTask(new IdMessage { Id = task.Id }, null).Result;
 
             //Assert
-            Assert.AreEqual(task.Report, report);
+            Assert.IsEmpty(report.Report);
         }
     }
 }

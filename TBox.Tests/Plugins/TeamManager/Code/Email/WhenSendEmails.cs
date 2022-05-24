@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Mnk.Library.Common.MT;
+﻿using Mnk.Library.Common.MT;
 using Mnk.TBox.Plugins.TeamManager.Code.Emails;
 using Mnk.TBox.Plugins.TeamManager.Code.Emails.Senders;
 using Moq;
@@ -9,7 +7,7 @@ using NUnit.Framework;
 namespace Mnk.TBox.Tests.Plugins.TeamManager.Code.Email
 {
     [TestFixture]
-    class When_send_emails
+    class WhenSendEmails
     {
         private Mock<IReportContext> context;
         private Mock<IUpdater> updater;

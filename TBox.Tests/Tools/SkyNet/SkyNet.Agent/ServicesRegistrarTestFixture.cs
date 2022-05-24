@@ -8,7 +8,7 @@ using NUnit.Framework;
 namespace Mnk.TBox.Tests.Tools.SkyNet.SkyNet.Agent
 {
     [TestFixture]
-    class ServicesRegistratorTestFixture
+    class ServicesRegistrarTestFixture
     {
         private Mock<ConfigProvider<AgentConfig>> provider;
         private IServiceContainer container;

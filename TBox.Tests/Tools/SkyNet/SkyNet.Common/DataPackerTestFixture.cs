@@ -1,6 +1,4 @@
-﻿using System;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.IO.Compression;
 using Mnk.TBox.Tools.SkyNet.Common.Modules;
 using NUnit.Framework;

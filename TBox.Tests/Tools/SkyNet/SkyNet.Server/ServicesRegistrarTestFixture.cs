@@ -9,7 +9,7 @@ using NUnit.Framework;
 namespace Mnk.TBox.Tests.Tools.SkyNet.SkyNet.Server
 {
     [TestFixture]
-    class ServicesRegistratorTestFixture
+    class ServicesRegistrarTestFixture
     {
         private Mock<ConfigProvider<ServerConfig>> provider;
         private IServiceContainer container;
