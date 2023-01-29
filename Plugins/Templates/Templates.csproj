@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <OutputType>Library</OutputType>
     <RootNamespace>Mnk.TBox.Plugins.Templates</RootNamespace>
     <AssemblyName>Mnk.TBox.Plugins.Templates</AssemblyName>
@@ -17,8 +17,8 @@
     <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Mnk.Library.Common" Version="2.0.0" />
-    <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.0" />
-    <PackageReference Include="Mnk.Library.WpfSyntaxHighlighter" Version="2.0.0" />
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
+    <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1" />
+    <PackageReference Include="Mnk.Library.WpfSyntaxHighlighter" Version="2.0.1" />
   </ItemGroup>
 </Project>

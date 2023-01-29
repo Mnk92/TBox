@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net6.0-windows</TargetFramework>
+        <TargetFramework>net7.0-windows</TargetFramework>
         <OutputType>Exe</OutputType>
         <RootNamespace>Mnk.TBox.Tools.SkyNet.Server</RootNamespace>
         <AssemblyName>Mnk.TBox.Tools.SkyNet.Server</AssemblyName>
@@ -16,10 +16,10 @@
     <ProjectReference Include="..\SkyNet.Contracts\SkyNet.Contracts.csproj" />
   </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="LightInject" Version="6.4.1" />
-        <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
+        <PackageReference Include="LightInject" Version="6.6.3" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.51.0" />
         <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" />
-        <PackageReference Include="Mnk.Library.Common" Version="2.0.0" />
+        <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="appsettings.json">

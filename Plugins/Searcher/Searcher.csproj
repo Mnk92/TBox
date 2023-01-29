@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net6.0-windows</TargetFramework>
+        <TargetFramework>net7.0-windows</TargetFramework>
         <OutputType>Library</OutputType>
         <RootNamespace>Mnk.TBox.Plugins.Searcher</RootNamespace>
         <AssemblyName>Mnk.TBox.Plugins.Searcher</AssemblyName>
@@ -28,10 +28,10 @@
         <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" IncludeAssets="compile" PrivateAssets="all" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="LightInject" Version="6.4.1" IncludeAssets="compile" PrivateAssets="all" />
-        <PackageReference Include="Mnk.Library.Common" Version="2.0.0" IncludeAssets="compile" PrivateAssets="all" />
-        <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.0" IncludeAssets="compile" PrivateAssets="all" />
-        <PackageReference Include="Mnk.Library.WpfSyntaxHighlighter" Version="2.0.0" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="LightInject" Version="6.6.3" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="Mnk.Library.Common" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="Mnk.Library.WpfSyntaxHighlighter" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
         <PackageReference Include="ZetaLongPaths.NetStandard" Version="1.0.0.35" IncludeAssets="compile" PrivateAssets="all" />
     </ItemGroup>
 </Project>

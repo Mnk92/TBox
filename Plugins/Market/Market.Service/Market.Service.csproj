@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net6.0-windows</TargetFramework>
+        <TargetFramework>net7.0-windows</TargetFramework>
         <OutputType>Exe</OutputType>
         <RootNamespace>Mnk.TBox.Plugins.Market.Service</RootNamespace>
         <AssemblyName>Mnk.TBox.Plugins.Market.Service</AssemblyName>
@@ -17,15 +17,15 @@
     </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Market.Contracts\Market.Contracts.csproj" />
-        <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="16.35.0" />
-        <PackageReference Include="DotNetCore.Objects" Version="16.35.0" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
+        <PackageReference Include="DotNetCore.EntityFrameworkCore" Version="17.12.0" />
+        <PackageReference Include="DotNetCore.Objects" Version="17.12.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.5" />
-        <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.2" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.51.0" />
         <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" />
-        <PackageReference Include="Mnk.Library.Common" Version="2.0.0" />
+        <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
     </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>Library</OutputType>
     <RootNamespace>Mnk.TBox.Tools.SkyNet.Contracts</RootNamespace>
@@ -12,7 +12,7 @@
     <OutputPath>..\..\bin\$(Configuration)\Libraries\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.46.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.51.0" />
   </ItemGroup>
   <ItemGroup>
     <Protobuf Include="Proto\contracts.proto" GrpcServices="Both" Link="Proto\contracts.proto" />

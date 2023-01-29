@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net7.0-windows</TargetFramework>
     <OutputType>Exe</OutputType>
     <RootNamespace>Mnk.TBox.Tools.ConsoleScriptRunner</RootNamespace>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
@@ -13,7 +13,7 @@
     <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj" IncludeAssets="compile" PrivateAssets="all"  />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Mnk.Library.Common" Version="2.0.0" IncludeAssets="compile" PrivateAssets="all"  />
-    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.0" IncludeAssets="compile" PrivateAssets="all"  />
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all"  />
+    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all"  />
   </ItemGroup>
 </Project>
