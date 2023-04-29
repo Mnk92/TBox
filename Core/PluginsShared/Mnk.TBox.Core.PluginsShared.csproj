@@ -20,15 +20,19 @@
         </Reference>
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" IncludeAssets="compile" PrivateAssets="all" />
-        <ProjectReference Include="..\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all" />
+        <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" IncludeAssets="compile" PrivateAssets="all">
+          <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all">
+          <Private>False</Private>
+        </ProjectReference>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Mnk.Library.Common" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
         <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
         <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
         <PackageReference Include="Mnk.Library.WpfSyntaxHighlighter" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
-        <PackageReference Include="System.ServiceProcess.ServiceController" Version="7.0.0" />
+        <PackageReference Include="System.ServiceProcess.ServiceController" Version="7.0.0" IncludeAssets="compile" PrivateAssets="all" />
         <PackageReference Include="ZetaLongPaths.NetStandard" Version="1.0.0.35" IncludeAssets="compile" PrivateAssets="all" />
     </ItemGroup>
 </Project>

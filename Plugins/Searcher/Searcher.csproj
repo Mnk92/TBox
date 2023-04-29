@@ -19,10 +19,18 @@
         <Resource Include="Resources\Icon.ico" />
     </ItemGroup>
     <ItemGroup>
-        <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all" />
-        <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj" IncludeAssets="compile" PrivateAssets="all" />
-        <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" IncludeAssets="compile" PrivateAssets="all" />
-        <ProjectReference Include="..\..\Searcher\Mnk.Rat.csproj" IncludeAssets="compile" PrivateAssets="all" />
+        <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all">
+          <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj" IncludeAssets="compile" PrivateAssets="all">
+          <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" IncludeAssets="compile" PrivateAssets="all">
+          <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\..\Searcher\Mnk.Rat.csproj" IncludeAssets="compile" PrivateAssets="all">
+          <Private>False</Private>
+        </ProjectReference>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" IncludeAssets="compile" PrivateAssets="all" />

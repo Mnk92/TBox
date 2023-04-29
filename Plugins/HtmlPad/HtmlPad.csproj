@@ -12,8 +12,12 @@
     <OutputPath>..\..\bin\$(Configuration)\Plugins\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" />
-    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" />
+    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj">
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />

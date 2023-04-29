@@ -113,8 +113,14 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" />
-    <ProjectReference Include="..\Contracts\Mnk.TBox.Core.Contracts.csproj" />
+    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj">
+      <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+    </ProjectReference>
+    <ProjectReference Include="..\Contracts\Mnk.TBox.Core.Contracts.csproj">
+      <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="changelog.txt">
@@ -131,14 +137,14 @@
     <Resource Include="Resources\Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LightInject" Version="6.6.3" />
-    <PackageReference Include="Mnk.Library.AutoUpdateAndFeedback" Version="2.0.1" />
-    <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
-    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" />
-    <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1" />
-    <PackageReference Include="Mnk.ParallelNUnit" Version="2.0.1" />
-    <PackageReference Include="ConsoleUnitTestsRunner" Version="2.0.1" />
-    <PackageReference Include="NUnitAgent" Version="2.0.1" />
+    <PackageReference Include="LightInject" Version="6.6.3" IncludeAssets="compile" PrivateAssets="all" />
+    <PackageReference Include="Mnk.Library.AutoUpdateAndFeedback" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
+    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
+    <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
+    <PackageReference Include="Mnk.ParallelNUnit" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
+    <PackageReference Include="ConsoleUnitTestsRunner" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
+    <PackageReference Include="NUnitAgent" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Data\Automater\Runner.cs" />
