@@ -17,7 +17,7 @@
     <ProjectReference Include="..\..\..\Localization\Mnk.TBox.Locales.Localization.csproj" />
     <ProjectReference Include="..\Market.Contracts\Market.Contracts.csproj" />
 
-    <PackageReference Include="Grpc.AspNetCore" Version="2.51.0" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.52.0" />
     <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" />
     <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
     <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1" />
