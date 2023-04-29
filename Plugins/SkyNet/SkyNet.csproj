@@ -13,10 +13,21 @@
     <OutputPath>..\..\bin\$(Configuration)\Plugins\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" />
-    <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj" />
-    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" />
-    <ProjectReference Include="..\..\Tools\SkyNet.Common\SkyNet.Common.csproj" />
+    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tools\SkyNet.Common\SkyNet.Common.csproj">
+      <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <PrivateAssets></PrivateAssets>
+      <ExcludeAssets></ExcludeAssets>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LightInject" Version="6.6.3" />

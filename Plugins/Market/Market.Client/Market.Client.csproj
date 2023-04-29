@@ -13,13 +13,27 @@
     <OutputPath>..\..\..\bin\$(Configuration)\Plugins\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" />
-    <ProjectReference Include="..\..\..\Localization\Mnk.TBox.Locales.Localization.csproj" />
-    <ProjectReference Include="..\Market.Contracts\Market.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Localization\Mnk.TBox.Locales.Localization.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Market.Contracts\Market.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
 
-    <PackageReference Include="Grpc.AspNetCore" Version="2.52.0" />
-    <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" />
-    <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
-    <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.52.0">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.1">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 </Project>

@@ -17,8 +17,12 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" />
-    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" />
+    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj">
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\spinner.gif" />

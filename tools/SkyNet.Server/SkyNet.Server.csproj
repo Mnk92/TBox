@@ -11,15 +11,21 @@
         <OutputPath>..\..\bin\$(Configuration)\Tools\SkyNet\Server</OutputPath>
     </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" />
-    <ProjectReference Include="..\SkyNet.Common\SkyNet.Common.csproj" />
-    <ProjectReference Include="..\SkyNet.Contracts\SkyNet.Contracts.csproj" />
+    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyNet.Common\SkyNet.Common.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyNet.Contracts\SkyNet.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="LightInject" Version="6.6.3" />
-        <PackageReference Include="Grpc.AspNetCore" Version="2.52.0" />
-        <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" />
-        <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
+        <PackageReference Include="LightInject" Version="6.6.3" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="Grpc.AspNetCore" Version="2.52.0" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="Mnk.Library.Common" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
     </ItemGroup>
     <ItemGroup>
       <Content Include="appsettings.json">

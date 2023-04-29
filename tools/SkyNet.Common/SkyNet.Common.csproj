@@ -12,12 +12,16 @@
     <OutputPath>..\..\bin\$(Configuration)\Libraries\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SkyNet.Contracts\SkyNet.Contracts.csproj" />
-    <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj" />
+    <ProjectReference Include="..\SkyNet.Contracts\SkyNet.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj">
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Grpc.AspNetCore" Version="2.52.0" />
-    <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
-    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.52.0"/>
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.1"/>
+    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1"/>
   </ItemGroup>
 </Project>

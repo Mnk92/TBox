@@ -8,18 +8,24 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>..\..\bin\$(Configuration)\Tools\Sky.Net\Agent</OutputPath>
+    <OutputPath>..\..\bin\$(Configuration)\Tools\SkyNet\Agent</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" />
-    <ProjectReference Include="..\SkyNet.Common\SkyNet.Common.csproj" />
-    <ProjectReference Include="..\SkyNet.Contracts\SkyNet.Contracts.csproj" />
+    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyNet.Common\SkyNet.Common.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\SkyNet.Contracts\SkyNet.Contracts.csproj">
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LightInject" Version="6.6.3" />
-    <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" />
-    <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
-    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" />
+    <PackageReference Include="LightInject" Version="6.6.3"/>
+    <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2"/>
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.1"/>
+    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1"/>
   </ItemGroup>
   <ItemGroup>
       <Content Include="appsettings.json">
