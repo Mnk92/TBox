@@ -15,22 +15,35 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj">
       <Private>False</Private>
+      <PrivateAssets>all</PrivateAssets>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
     </ProjectReference>
     <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj">
       <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
     <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj">
       <Private>False</Private>
+      <PrivateAssets>all</PrivateAssets>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
     </ProjectReference>
     <ProjectReference Include="..\..\Tools\SkyNet.Common\SkyNet.Common.csproj">
       <Private>False</Private>
       <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
-      <PrivateAssets></PrivateAssets>
+      <PrivateAssets>all</PrivateAssets>
       <ExcludeAssets></ExcludeAssets>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tools\SkyNet.Contracts\SkyNet.Contracts.csproj">
+      <PrivateAssets>all</PrivateAssets>
+      <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LightInject" Version="6.6.3" />
+    <PackageReference Include="Grpc.AspNetCore" Version="2.53.0" />
+    <PackageReference Include="Google.Protobuf" Version="3.23.0" />
+    <PackageReference Include="LightInject" Version="6.6.4" />
     <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
     <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" />
     <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1" />

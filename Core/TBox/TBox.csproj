@@ -116,10 +116,12 @@
     <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj">
       <Private>False</Private>
       <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
     <ProjectReference Include="..\Contracts\Mnk.TBox.Core.Contracts.csproj">
       <Private>False</Private>
       <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -137,7 +139,7 @@
     <Resource Include="Resources\Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LightInject" Version="6.6.3" IncludeAssets="compile" PrivateAssets="all" />
+    <PackageReference Include="LightInject" Version="6.6.4" IncludeAssets="compile" PrivateAssets="all" />
     <PackageReference Include="Mnk.Library.AutoUpdateAndFeedback" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
     <PackageReference Include="Mnk.Library.Common" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
     <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />

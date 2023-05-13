@@ -36,7 +36,7 @@
         <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" IncludeAssets="compile" PrivateAssets="all" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="LightInject" Version="6.6.3" IncludeAssets="compile" PrivateAssets="all" />
+        <PackageReference Include="LightInject" Version="6.6.4" IncludeAssets="compile" PrivateAssets="all" />
         <PackageReference Include="Mnk.Library.Common" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
         <PackageReference Include="Mnk.Library.WpfControls" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
         <PackageReference Include="Mnk.Library.WpfSyntaxHighlighter" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />

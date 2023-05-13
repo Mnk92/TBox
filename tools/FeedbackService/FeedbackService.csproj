@@ -23,6 +23,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all" />
+    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all">
+      <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+    </ProjectReference>
   </ItemGroup>
 </Project>

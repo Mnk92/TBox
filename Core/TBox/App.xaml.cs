@@ -7,7 +7,6 @@ using Mnk.Library.Common;
 using Mnk.Library.Common.Log;
 using Mnk.Library.WpfControls;
 using Mnk.Library.WpfControls.Localization;
-using Mnk.Library.WpfControls.Menu;
 using Mnk.TBox.Core.Application.Code;
 
 namespace Mnk.TBox.Core.Application

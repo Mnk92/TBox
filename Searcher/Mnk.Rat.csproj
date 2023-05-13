@@ -8,7 +8,11 @@
     <OutputPath>..\bin\$(Configuration)\Libraries\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Localization\Mnk.TBox.Locales.Localization.csproj" />
+    <ProjectReference Include="..\Localization\Mnk.TBox.Locales.Localization.csproj">
+      <PrivateAssets>all</PrivateAssets>
+      <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
@@ -17,7 +21,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LightInject" Version="6.6.3" />
+    <PackageReference Include="LightInject" Version="6.6.4" />
     <PackageReference Include="Mnk.Library.Common" Version="2.0.1" />
   </ItemGroup>
 </Project>

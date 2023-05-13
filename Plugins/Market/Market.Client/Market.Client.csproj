@@ -23,7 +23,7 @@
       <Private>False</Private>
     </ProjectReference>
 
-    <PackageReference Include="Grpc.AspNetCore" Version="2.52.0">
+    <PackageReference Include="Grpc.AspNetCore" Version="2.53.0">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2">

@@ -1,24 +1,25 @@
-﻿using Mnk.Library.Common.Log;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+﻿using System.Reflection;
 
 namespace Mnk.TBox.Plugins.Market.Service
 {
     class Program
     {
-        private static readonly ILog Log = LogManager.GetLogger<Program>();
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
         static void Main(string[] args)
         {
-            LogManager.Init(new MultiplyLog(new FileLog("log.log"), new ConsoleLog()));
-            var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddGrpc();
-            builder.Services.AddDbContext<Context.Context>(x => x.UseSqlite(builder.Configuration.GetConnectionString("AppDbContext")));
-            var app = builder.Build();
-            app.MapGrpcService<MarketService>();
-            app.Run();
+            // Fix to load dependencies correctly
+            AppDomain.CurrentDomain.AssemblyResolve += (s, a) =>
+            {
+                return (from dir in new[] { "Libraries", "Localization" }
+                        select Path.GetFullPath(
+                            Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", dir, new AssemblyName(a.Name).Name + ".dll"))
+                    into assemblyPath
+                        where File.Exists(assemblyPath)
+                        select Assembly.LoadFrom(assemblyPath)).FirstOrDefault();
+            };
+            App.Run(args);
         }
     }
 }

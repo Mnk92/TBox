@@ -22,9 +22,11 @@
     <ItemGroup>
         <ProjectReference Include="..\..\Localization\Mnk.TBox.Locales.Localization.csproj" IncludeAssets="compile" PrivateAssets="all">
           <Private>False</Private>
+          <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
         </ProjectReference>
         <ProjectReference Include="..\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all">
           <Private>False</Private>
+          <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
         </ProjectReference>
     </ItemGroup>
     <ItemGroup>

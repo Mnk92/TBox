@@ -9,11 +9,17 @@
     <OutputPath>..\..\bin\$(Configuration)\Tools\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all"  />
-    <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj" IncludeAssets="compile" PrivateAssets="all"  />
+    <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj" IncludeAssets="compile" PrivateAssets="all">
+      <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\PluginsShared\Mnk.TBox.Core.PluginsShared.csproj" IncludeAssets="compile" PrivateAssets="all">
+      <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Mnk.Library.Common" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all"  />
-    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all"  />
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
+    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1" IncludeAssets="compile" PrivateAssets="all" />
   </ItemGroup>
 </Project>

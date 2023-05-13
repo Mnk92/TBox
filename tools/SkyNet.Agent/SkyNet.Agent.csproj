@@ -13,19 +13,26 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Core\Contracts\Mnk.TBox.Core.Contracts.csproj">
       <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
     <ProjectReference Include="..\SkyNet.Common\SkyNet.Common.csproj">
       <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
     <ProjectReference Include="..\SkyNet.Contracts\SkyNet.Contracts.csproj">
       <Private>False</Private>
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <PrivateAssets>all</PrivateAssets>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LightInject" Version="6.6.3"/>
-    <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2"/>
-    <PackageReference Include="Mnk.Library.Common" Version="2.0.1"/>
-    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1"/>
+    <PackageReference Include="Grpc.AspNetCore" Version="2.53.0"  IncludeAssets="compile" PrivateAssets="all"/>
+    <PackageReference Include="LightInject" Version="6.6.4"  IncludeAssets="compile" PrivateAssets="all"/>
+    <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2"  IncludeAssets="compile" PrivateAssets="all"/>
+    <PackageReference Include="Mnk.Library.Common" Version="2.0.1"  IncludeAssets="compile" PrivateAssets="all"/>
+    <PackageReference Include="Mnk.Library.ScriptEngine" Version="2.0.1"  IncludeAssets="compile" PrivateAssets="all"/>
   </ItemGroup>
   <ItemGroup>
       <Content Include="appsettings.json">
